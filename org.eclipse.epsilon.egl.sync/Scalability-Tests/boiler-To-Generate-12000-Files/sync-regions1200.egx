@@ -1,0 +1,32 @@
+//rule Model2Class 
+//	transform m : Model {
+
+//	template : "../common/model2class.egl"
+
+//	parameters : Map{"package"="syncregions"}
+
+//	target : "src-gen-sync-regions/syncregions/" + m.name + ".java"
+	
+//}
+
+//rule Component2Class 
+//	transform c : Component {
+
+//	template : "sync-regions-component2class.egl"
+
+//	target : "10Files-src-gen-sync-regions/syncregions/" + c.name + ".java"
+	
+//}
+
+
+rule Component2Class 
+	transform c : Component {
+
+	template : "sync-regions-component2class-1200Files.egl"
+
+	target : "boiler-To-Generate-1200-Files/syncregions-1200Files/" + c.name + ".java"
+	
+}
+
+
+

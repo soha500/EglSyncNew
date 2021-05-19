@@ -1,0 +1,55 @@
+
+rule ModuleToJava
+
+	transform m : Module {
+
+	template : "Module2Java.egl"
+
+	target :    "gen/" + m.name + '.Java' 
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//rule StudentToJava
+
+//	transform s : Student {
+
+//	template : "Student2Java.egl"
+
+//	target :     s.reg + '.java' 
+	
+//}
+//rule ModuleToHTML
+
+//	transform m : Module {
+
+//	template : "Module2html.egl"
+
+	//target :    "Test11/" + m.name + '.html' 
+//	target :    m.name + '.html' 
+	
+//}
+
+//rule StudentToHTML
+
+//	transform s : Student {
+
+//	template : "Student2html.egl"
+
+	//target :    "students/" + s.reg + '.html' 
+//	target :     s.reg + '.html' 
+	
+//}

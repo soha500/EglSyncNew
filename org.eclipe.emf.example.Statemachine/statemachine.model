@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<statemachine:StateMachine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:statemachine="statemachine" xmi:id="_FDutgM4kEeiVHvRLHYXWcg">
+  <states xmi:id="_GfrHEM4kEeiVHvRLHYXWcg"/>
+  <transitions xmi:id="_LCDGEM4kEeiVHvRLHYXWcg"/>
+</statemachine:StateMachine>

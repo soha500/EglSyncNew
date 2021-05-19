@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="comps" xsi:schemaLocation="comps ../boiler-Ecore/comps.ecore" xmi:id="_bfpnEEbFEeqXnfGWlV2_8A" name="BoilerController" behaviour=" ">
+  <inPorts xmi:id="_bfpnEUbFEeqXnfGWlV2_8A" name="temperature" type="int" outgoing="_bfpnHUbFEeqXnfGWlV2_8A"/>
+  <inPorts xmi:id="_bfpnEkbFEeqXnfGWlV2_8A" name="targetTemperature" type="int" outgoing="_bfpnHkbFEeqXnfGWlV2_8A"/>
+  <inPorts xmi:id="_bfpnE0bFEeqXnfGWlV2_8A" name="boilerStatus" type="boolean" outgoing="_bfpnH0bFEeqXnfGWlV2_8A"/>
+  <outPort xmi:id="_bfpnFEbFEeqXnfGWlV2_8A" name="action" type="int" incoming="_bfpnIEbFEeqXnfGWlV2_8A"/>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_11" name="TemperatureController11" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature11" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature11" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference11" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_11" name="BoilerActuator11" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference11" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus11" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action11" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_12" name="TemperatureController12" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature12" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature12" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference12" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_12" name="BoilerActuator12" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference12" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus12" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action12" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_13" name="TemperatureController13" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature13" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature13" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference13" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_13" name="BoilerActuator13" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference13" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus13" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action13" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_14" name="TemperatureController14" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature14" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature14" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference14" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_14" name="BoilerActuator14" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference14" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus14" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action14" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_15" name="TemperatureController15" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature15" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature15" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference15" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_15" name="BoilerActuator15" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference15" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus15" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action15" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_16" name="TemperatureController16" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature16" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature16" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference16" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_16" name="BoilerActuator16" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference16" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus16" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action16" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_17" name="TemperatureController17" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature17" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature17" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference17" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_17" name="BoilerActuator17" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference17" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus17" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action17" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_18" name="TemperatureController18" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature18" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature18" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference18" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_18" name="BoilerActuator18" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference18" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus18" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action18" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_19" name="TemperatureController19" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature19" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature19" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference19" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_19" name="BoilerActuator19" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference19" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus19" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action19" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_20" name="TemperatureController20" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature20" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature20" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference20" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_20" name="BoilerActuator20" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference20" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus20" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action20" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_21" name="TemperatureController21" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature21" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature21" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference21" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_21" name="BoilerActuator21" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference21" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus21" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action21" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_22" name="TemperatureController22" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature22" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature22" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference22" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_22" name="BoilerActuator22" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference22" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus22" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action22" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_23" name="TemperatureController23" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature23" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature23" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference23" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_23" name="BoilerActuator23" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference23" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus23" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action23" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_24" name="TemperatureController24" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature24" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature24" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference24" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_24" name="BoilerActuator24" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference24" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus24" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action24" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_25" name="TemperatureController25" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature25" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature25" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference25" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_25" name="BoilerActuator25" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference25" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus25" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action25" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_26" name="TemperatureController26" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature26" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature26" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference26" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_26" name="BoilerActuator26" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference26" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus26" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action26" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_27" name="TemperatureController27" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature27" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature27" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference27" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_27" name="BoilerActuator27" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference27" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus27" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action27" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_28" name="TemperatureController28" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature28" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature28" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference28" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_28" name="BoilerActuator28" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference28" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus28" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action28" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_29" name="TemperatureController29" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature29" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature29" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference29" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_29" name="BoilerActuator29" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference29" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus29" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action29" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_30" name="TemperatureController30" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature30" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature30" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference30" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_30" name="BoilerActuator30" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference30" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus30" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action30" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_31" name="TemperatureController31" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature31" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature31" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference31" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_31" name="BoilerActuator31" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference31" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus31" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action31" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_32" name="TemperatureController32" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature32" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature32" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference32" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_32" name="BoilerActuator32" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference32" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus32" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action32" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_33" name="TemperatureController33" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature33" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature33" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference33" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_33" name="BoilerActuator33" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference33" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus33" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action33" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_34" name="TemperatureController34" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature34" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature34" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference34" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_34" name="BoilerActuator34" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference34" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus34" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action34" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_35" name="TemperatureController35" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature35" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature35" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference35" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_35" name="BoilerActuator35" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference35" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus35" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action35" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_36" name="TemperatureController36" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature36" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature36" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference36" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_36" name="BoilerActuator36" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference36" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus36" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action36" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_37" name="TemperatureController37" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature37" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature37" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference37" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_37" name="BoilerActuator37" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference37" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus37" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action37" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_38" name="TemperatureController38" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature38" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature38" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference38" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_38" name="BoilerActuator38" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference38" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus38" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action38" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_39" name="TemperatureController39" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature39" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature39" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference39" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_39" name="BoilerActuator39" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference39" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus39" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action39" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_40" name="TemperatureController40" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature40" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature40" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference40" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_40" name="BoilerActuator40" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference40" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus40" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action40" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_41" name="TemperatureController41" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature41" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature41" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference41" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_41" name="BoilerActuator41" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference41" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus41" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action41" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_42" name="TemperatureController42" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature42" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature42" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference42" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_42" name="BoilerActuator42" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference42" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus42" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action42" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_43" name="TemperatureController43" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature43" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature43" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference43" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_43" name="BoilerActuator43" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference43" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus43" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action43" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_44" name="TemperatureController44" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature44" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature44" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference44" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_44" name="BoilerActuator44" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference44" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus44" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action44" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_45" name="TemperatureController45" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature45" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature45" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference45" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_45" name="BoilerActuator45" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference45" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus45" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action45" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_46" name="TemperatureController46" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature46" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature46" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference46" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_46" name="BoilerActuator46" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference46" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus46" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action46" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_47" name="TemperatureController47" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature47" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature47" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference47" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_47" name="BoilerActuator47" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference47" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus47" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action47" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_48" name="TemperatureController48" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature48" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature48" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference48" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_48" name="BoilerActuator48" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference48" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus48" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action48" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_49" name="TemperatureController49" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature49" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature49" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference49" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_49" name="BoilerActuator49" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference49" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus49" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action49" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_50" name="TemperatureController50" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature50" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature50" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference50" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_50" name="BoilerActuator50" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference50" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus50" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action50" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_51" name="TemperatureController51" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature51" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature51" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference51" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_51" name="BoilerActuator51" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference51" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus51" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action51" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_52" name="TemperatureController52" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature52" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature52" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference52" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_52" name="BoilerActuator52" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference52" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus52" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action52" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_53" name="TemperatureController53" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature53" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature53" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference53" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_53" name="BoilerActuator53" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference53" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus53" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action53" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_54" name="TemperatureController54" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature54" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature54" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference54" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_54" name="BoilerActuator54" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference54" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus54" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action54" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_55" name="TemperatureController55" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature55" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature55" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference55" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_55" name="BoilerActuator55" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference55" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus55" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action55" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_56" name="TemperatureController56" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature56" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature56" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference56" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_56" name="BoilerActuator56" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference56" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus56" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action56" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_57" name="TemperatureController57" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature57" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature57" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference57" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_57" name="BoilerActuator57" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference57" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus57" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action57" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_58" name="TemperatureController58" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature58" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature58" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference58" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_58" name="BoilerActuator58" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference58" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus58" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action58" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_59" name="TemperatureController59" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature59" type="int"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature59" type="int"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference59" type="int"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_59" name="BoilerActuator59" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference59" type="int"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus59" type="boolean"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action59" type="int"/>
+  </components>
+  <components xmi:id="_bfpnFUbFEeqXnfGWlV2_60" name="TemperatureController60" behaviour="LastTestif(temperatureDifference > 0 &amp;&amp; boilerStatus == true) { return 1; } else if (temperatureDifference &lt; 0 &amp;&amp; boilerStatus == false) { return 2; } else return 0;">
+    <inPorts xmi:id="_bfpnFkbFEeqXnfGWlV2_8A" name="temperature60" type="int" incoming="_bfpnHUbFEeqXnfGWlV2_8A"/>
+    <inPorts xmi:id="_bfpnF0bFEeqXnfGWlV2_8A" name="targetTemperature60" type="int" incoming="_bfpnHkbFEeqXnfGWlV2_8A"/>
+    <outPort xmi:id="_bfpnGEbFEeqXnfGWlV2_8A" name="temperatureDifference60" type="int" outgoing="_bfpnIUbFEeqXnfGWlV2_8A"/>
+  </components>
+  <components xmi:id="_bfpnGUbFEeqXnfGWlV2_60" name="BoilerActuator60" behaviour="LastTest- return temperature - targetTemperature;">
+    <inPorts xmi:id="_bfpnGkbFEeqXnfGWlV2_8A" name="temperatureDifference60" type="int" incoming="_bfpnIUbFEeqXnfGWlV2_8A"/>
+    <inPorts xmi:id="_bfpnG0bFEeqXnfGWlV2_8A" name="boilerStatus60" type="boolean" incoming="_bfpnH0bFEeqXnfGWlV2_8A"/>
+    <outPort xmi:id="_bfpnHEbFEeqXnfGWlV2_8A" name="action60" type="int" outgoing="_bfpnIEbFEeqXnfGWlV2_8A"/>
+  </components>
+  <connectors xmi:id="_bfpnHUbFEeqXnfGWlV2_8A" source="_bfpnEUbFEeqXnfGWlV2_8A" target="_bfpnFkbFEeqXnfGWlV2_8A"/>
+  <connectors xmi:id="_bfpnHkbFEeqXnfGWlV2_8A" source="_bfpnEkbFEeqXnfGWlV2_8A" target="_bfpnF0bFEeqXnfGWlV2_8A"/>
+  <connectors xmi:id="_bfpnH0bFEeqXnfGWlV2_8A" source="_bfpnE0bFEeqXnfGWlV2_8A" target="_bfpnG0bFEeqXnfGWlV2_8A"/>
+  <connectors xmi:id="_bfpnIEbFEeqXnfGWlV2_8A" source="_bfpnHEbFEeqXnfGWlV2_8A" target="_bfpnFEbFEeqXnfGWlV2_8A"/>
+  <connectors xmi:id="_bfpnIUbFEeqXnfGWlV2_8A" source="_bfpnGEbFEeqXnfGWlV2_8A" target="_bfpnGkbFEeqXnfGWlV2_8A"/>
+</Model>

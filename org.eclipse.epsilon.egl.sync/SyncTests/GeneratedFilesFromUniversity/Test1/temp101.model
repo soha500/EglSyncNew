@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<university:University xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:university="university" xsi:schemaLocation="university ../../Model-University/University.ecore" xmi:id="_L7_BMPxQEemsbtndia47ww">
+  <marks xmi:id="_NCCDQPxQEemsbtndia47ww" grade="50" student="_PDVMoPxQEemsbtndia47ww" module="_OeCHMPxQEemsbtndia47ww" gradeDouble="50.5" gradeChar="39"/>
+  <marks xmi:id="_NzfVYPxQEemsbtndia47ww" grade="60" student="_Png3wPxQEemsbtndia47ww" module="_OeCHMPxQEemsbtndia47ww" gradeDouble="60.6"/>
+  <module xmi:id="_OeCHMPxQEemsbtndia47ww" name="MDE" description="hello" marks="_NCCDQPxQEemsbtndia47ww _NzfVYPxQEemsbtndia47ww" compulsory="true" testFloat="60.0"/>
+  <stusent xmi:id="_PDVMoPxQEemsbtndia47ww" name="Tom Smith" reg="ts501" marks="_NCCDQPxQEemsbtndia47ww"/>
+  <stusent xmi:id="_Png3wPxQEemsbtndia47ww" name="Alice Jones" reg="aj102" marks="_NzfVYPxQEemsbtndia47ww"/>
+</university:University>

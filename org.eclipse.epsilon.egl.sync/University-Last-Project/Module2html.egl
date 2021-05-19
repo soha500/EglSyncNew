@@ -1,0 +1,23 @@
+<h1>[%=m.name%]</h1>
+
+<h2>Description</h2>
+
+[%=out.startSync("<!--","-->", m.id, "description")%] 
+[%=m.description%]
+[%=out.endSync()%]
+
+<h2>Marks</h2>
+<ul>
+[%for (m in m.marks){%]
+
+  <li> [%=m.student.name%] : [%=m.grade%]
+  
+[%}%]
+</ul>
+
+
+
+
+
+
+

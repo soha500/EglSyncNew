@@ -1,0 +1,27 @@
+@namespace(uri="emf.statemachine", prefix="emf.statemachine")
+package statemachine1;
+
+class StateMachine {
+	attr String name;
+	val State[*] states;
+	val Transition[*] transitions;
+	val Variable[*] variables;
+}
+
+class State {
+	attr String name;
+	ref Transition[*]#source outgoing;
+	ref Transition[*]#target incoming;
+	attr String action;
+}
+
+class Transition {
+	attr String condition;
+	ref State#outgoing source;
+	ref State#incoming target;
+}
+
+class Variable {
+	attr String name;
+	attr String type;
+}

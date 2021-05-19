@@ -1,0 +1,102 @@
+
+// 000111hhhfgd3333 
+public class [%=out.startSync("/*", "*/", m.id, "name")%] [%=m.name%] [%=out.endSync()%] {
+	
+	protected [%=m.name.type%] name;
+	
+	public [%=m.name.type%] getName(){ 
+		return name; 
+	}
+	
+	public [%=m.name.type%] setName(String name) {
+	this.name = name;
+	}
+	
+	[%=out.startPreserve("//", "//", "extra-method", true)%]
+			
+				
+	[%=out.stopPreserve()%]
+	
+	[%=out.startSync("//", m.id, "description")%] 
+	
+	
+	[%=out.endSync()%]
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[*
+
+	[%=out.startSync("//", m.id, "description")%] 
+	
+	
+	[%=out.endSync()%]
+	
+	
+public class [%=m.name%]{
+	
+	protected [%=m.name.type%] name;
+	
+	public [%=m.name.type%] getName(){ 
+		return name; 
+	}
+	
+	public [%=m.name.type%] setName(String name) {
+	this.name = name;
+	}
+		
+		[%=out.startPreserve("//", "//", "extra-method", true)%]
+		
+		
+		[%=out.stopPreserve()%]
+			
+}
+-*]
+
+[*-
+public class [%=m.name%] { //gen
+	
+	protected [%=m.name.type%] name; //gen
+	
+	public [%=m.name.type%] getName(){ //gen
+		return name; //gen
+	} //gen
+	
+	public [%=m.name.type%] setName(String name) { //gen
+	this.name = name; //gen
+	} //gen
+	
+		
+		[%=out.startPreserve("//", "", "extra-method", true)%]
+		
+		Manually written will be added here !!
+		
+		[%=out.stopPreserve()%]
+	
+} //gen
+*]

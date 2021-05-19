@@ -1,0 +1,30 @@
+public class [%=s.name%] {
+	
+	protected String state = "[%=s.states.first.name%]";
+	[%for (v in s.variables) { %]
+	public [%=s.type%] [%=s.name%];
+	[%}%]
+	
+	public void update() {
+		[%for (state in s.states) { %]
+		if (state.equalsIgnoreCase("[%=state.name%]")) {
+			[%for (outgoing in state.outgoing){%]
+			if ([%=outgoing.condition%]) {
+				[%=outgoing.target.name%]();
+				return;
+			}
+			[%}%]
+			return;
+		}
+		[%}%]
+	
+	
+	[%for (state in s.states) { %]
+	public void [%=state.name%]() {
+		this.state = "[%=state.name%]";
+		[%=state.action%]
+		[%=out.protect(state.action, "//", state.id(), "action")%]
+	}
+	[%}%]
+	
+}

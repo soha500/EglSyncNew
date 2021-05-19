@@ -1,0 +1,13 @@
+public class [%=out.startSync("/*", "*/", m.id, "name")%] [%=m.name%] [%=out.endSync()%] {
+	
+	protected [%=m.name.type%] name;
+	
+	public [%=m.name.type%] getName(){ 
+		return name; 
+	}
+	
+	public [%=m.name.type%] setName(String name) {
+	    this.name = name;
+	}
+
+}

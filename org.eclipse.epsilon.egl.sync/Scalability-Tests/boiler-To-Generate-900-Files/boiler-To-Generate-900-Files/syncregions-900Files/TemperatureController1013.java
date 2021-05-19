@@ -1,0 +1,13 @@
+package syncregions;
+
+public class TemperatureController1013 {
+	
+	public execute(int temperature1013, int targetTemperature1013) { 
+		
+		//sync _bfpnFUbFEeqXnfGWlV1013, behaviour     			 
+1-if(temperatureDifference > 0 && boilerStatus == true) { return 1; } else if (temperatureDifference < 0 && boilerStatus == false) { return 2; } else return 0;
+		//endSync
+
+	}
+
+}

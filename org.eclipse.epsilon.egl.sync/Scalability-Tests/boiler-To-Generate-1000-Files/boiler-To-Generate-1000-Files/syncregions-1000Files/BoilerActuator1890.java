@@ -1,0 +1,13 @@
+package syncregions;
+
+public class BoilerActuator1890 {
+	
+	public int execute(int temperatureDifference1890, boolean boilerStatus1890) { 
+		
+		//sync _bfpnGUbFEeqXnfGWlV1890, behaviour     			 
+Half Change - return temperature - targetTemperature;
+		//endSync
+
+	}
+
+}

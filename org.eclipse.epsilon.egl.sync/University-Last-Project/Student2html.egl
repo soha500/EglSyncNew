@@ -1,0 +1,9 @@
+<h1>[%=s.name%] ([%=s.reg%])</h1>
+
+<h2>Marks</h2>
+
+<ul>
+[%for (m in s.marks){%]
+  <li> [%=m.module.name%] : [%=m.grade%]
+[%}%]
+</ul>

@@ -1,0 +1,36 @@
+@namespace(uri="university", prefix="university")
+package university;
+
+class University {
+	val Mark[*] marks;
+	val Module[*] module;
+	val Student[*] stusent;
+	
+}
+
+class Module {
+	attr String name;
+	attr String description;
+	ref Mark[*] marks;
+	
+	attr boolean compulsory;
+	attr float testFloat;
+	
+
+}
+
+class Student {
+	attr String name;
+	attr String reg;
+	ref Mark[*] marks;
+	
+}
+class Mark{
+	attr int grade;
+	ref Student[*] student;	
+	ref Module[*] module;
+	
+	attr double gradeDouble;
+	attr char gradeChar;
+			
+}

@@ -1,0 +1,18 @@
+public class [%=m.name%] {
+	
+	protected [%=m.name.type%] name;
+	protected [%=m.description.type%] name;
+	
+	public [%=c.name.type%] getName(){ 
+		return name; 
+	}
+	
+	public [%=c.name.type%] setName(String name) {
+	this.name = name;
+	}
+		
+		[%=out.startPreserve("//", "", "extra-method", true)%]
+		
+		[%=out.stopPreserve()%]
+	
+}

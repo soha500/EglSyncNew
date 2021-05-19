@@ -12,7 +12,7 @@ import org.eclipse.epsilon.egl.output.IOutputBuffer;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 
 public class App {
-	
+//...	
 	public static void main(String[] args) throws Exception {
 		EglFileGeneratingTemplateFactory factory = new EglFileGeneratingTemplateFactory();
 		factory.setOutputRoot(new File("gen").getAbsolutePath());

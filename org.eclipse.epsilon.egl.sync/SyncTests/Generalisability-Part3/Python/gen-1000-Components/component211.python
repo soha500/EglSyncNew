@@ -1,0 +1,48 @@
+#Python
+	
+class =begin sync _P7xflFXuEeyXQOB43nOgrg, name   =end component211 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Outport155 = Outport155
+          self.__Outport838 = Outport838
+     
+     # Generate setter and getter for all inports in component211 class
+  	
+  	# Generate setter and getter for all outports in component211 class
+ 
+  	    def setOutport155(self):
+	    	#sync _P8bm7lXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport155 = Outport155
+   		
+   		def getOutport155(self):
+	    	#sync _P8bm7lXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport155   
+ 
+  	    def setOutport838(self):
+	    	#sync _P9-fBVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport838 = Outport838
+   		
+   		def getOutport838(self):
+	    	#sync _P9-fBVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport838   
+	 
+	def execute(self, ):
+		
+		#sync _P7xflFXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==BVg3IA==bIU3lNt3sbsqAdH4de0/fAk=Ds6HIA==KnZLDWSXASA=3QN+kP5zAdH1R4HnDWSXASA=3QN+O1VHIA==55MLj0IcASA=3QN+rd4mAdH1BJ6oj0IcASA=3QN+RyxiATc=vTWDASA=vY9zCQ==oPk1AA==ASA=ASA=AA==
+'''

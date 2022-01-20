@@ -1,0 +1,61 @@
+#Python
+	
+class =begin sync _GROs4FXuEeyXQOB43nOgrg, name   =end component37 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport436 = Inport436
+          self.__Inport997 = Inport997
+          self.__Inport1190 = Inport1190
+     
+     # Generate setter and getter for all inports in component37 class
+ 
+  	    def setInport436(self):
+	    	#sync _GSZKilXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport436 = Inport436 
+   		
+   		def getInport436(self):
+	    	#sync _GSZKilXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport436   
+ 
+  	    def setInport997(self):
+	    	#sync _GTKmoFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport997 = Inport997 
+   		
+   		def getInport997(self):
+	    	#sync _GTKmoFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport997   
+ 
+  	    def setInport1190(self):
+	    	#sync _GTiaClXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1190 = Inport1190 
+   		
+   		def getInport1190(self):
+	    	#sync _GTiaClXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1190   
+  	
+  	# Generate setter and getter for all outports in component37 class
+	 
+	def execute(self, int Inport436, int Inport997, int Inport1190):
+		
+		#sync _GROs4FXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==mlaIIA==bIU3EOsqC+oRTORHAdH4sM5fIA==10ysJj1BASA=3QN+wge0AdH1Egr7Jj1BASA=3QN+HM5FIA==fjeo0OP4ASA=3QN+JuWtAdH1uPX30OP4ASA=3QN+JauCIA==/vAF1HHHASA=3QN+1+EdAdH1G/uh1HHHASA=3QN+2w+bfAk=e+5qATc=6hMYASA=m57wCQ==oPk1AA==ASA=ASA=AA==
+'''

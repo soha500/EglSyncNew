@@ -1,0 +1,131 @@
+#Python
+	
+class =begin sync _XPxJgE4KEey8ms5zKeMjoQ, name   =end Model1 =begin endSync  =end : 
+ 
+# for components in the model
+    def __init__(): # constractor 
+ 
+         self.Component1 = Component1;
+ 
+         self.Component2 = Component2;
+ 
+         self.Component3 = Component3;
+ 
+         self.Component4 = Component4;
+ 
+         self.Component5 = Component5;
+ 
+# for ports in the model   	
+   	def __init__(): # constractor
+ 
+         self.Inport1 = Inport1;
+ 
+         self.Inport2 = Inport2;
+ 
+         self.Inport3 = Inport3;
+ 
+         self.Inport4 = Inport4;
+ 
+         self.Inport5 = Inport5;
+ 
+         self.Outport1 = Outport1;
+ 
+         self.Outport2 = Outport2;
+ 
+         self.Outport3 = Outport3;
+ 
+         self.Outport4 = Outport4;
+ 
+         self.Outport5 = Outport5;
+ 
+         self.Inport1 = Inport1;
+ 
+         self.Inport2 = Inport2;
+ 
+         self.Inport3 = Inport3;
+ 
+         self.Inport4 = Inport4;
+ 
+         self.Inport5 = Inport5;
+ 
+         self.Outport1 = Outport1;
+ 
+         self.Outport2 = Outport2;
+ 
+         self.Outport3 = Outport3;
+ 
+         self.Outport4 = Outport4;
+ 
+         self.Inport1 = Inport1;
+ 
+         self.Inport2 = Inport2;
+ 
+         self.Inport3 = Inport3;
+ 
+         self.Inport4 = Inport4;
+ 
+         self.Inport5 = Inport5;
+ 
+         self.Inport6 = Inport6;
+ 
+         self.Outport1 = Outport1;
+ 
+         self.Outport2 = Outport2;
+ 
+         self.Outport3 = Outport3;
+ 
+         self.Outport4 = Outport4;
+ 
+         self.Outport5 = Outport5;
+ 
+         self.Inport1 = Inport1;
+ 
+         self.Inport2 = Inport2;
+ 
+         self.Inport3 = Inport3;
+ 
+         self.Inport4 = Inport4;
+ 
+         self.Inport5 = Inport5;
+ 
+         self.Inport6 = Inport6;
+ 
+         self.Outport1 = Outport1;
+ 
+         self.Outport2 = Outport2;
+ 
+         self.Outport3 = Outport3;
+ 
+         self.Outport4 = Outport4;
+ 
+         self.Outport5 = Outport5;
+ 
+         self.Inport1 = Inport1;
+ 
+         self.Inport2 = Inport2;
+ 
+         self.Inport3 = Inport3;
+ 
+         self.Inport4 = Inport4;
+ 
+         self.Inport5 = Inport5;
+ 
+         self.Inport6 = Inport6;
+ 
+         self.Outport1 = Outport1;
+ 
+         self.Outport2 = Outport2;
+ 
+         self.Outport3 = Outport3;
+ 
+         self.Outport4 = Outport4;
+ 
+   	
+   	   
+
+
+
+
+'''
+yt02CQ==ZEjyIA==BYJF5X/JIA==3l4oIA==ODmSIA==khT9IA==6/BnIA==RcvRIA==Ddh/UrqCIA==Vu1HIA==Xp7tIA==ZlCSIA==bgI4IA==dbPdIA==U4GaIA==QgShIA==MIenIA==HwquIA==DY20IA==Vu1HIA==Xp7tIA==ZlCSIA==bgI4IA==dbPdIA==U4GaIA==QgShIA==MIenIA==HwquIA==Vu1HIA==Xp7tIA==ZlCSIA==bgI4IA==dbPdIA==fWWDIA==U4GaIA==QgShIA==MIenIA==HwquIA==DY20IA==Vu1HIA==Xp7tIA==ZlCSIA==bgI4IA==dbPdIA==fWWDIA==U4GaIA==QgShIA==MIenIA==HwquIA==DY20IA==Vu1HIA==Xp7tIA==ZlCSIA==bgI4IA==dbPdIA==fWWDIA==U4GaIA==QgShIA==MIenIA==HwquIA==Dwfp1Sn/AA==AA==AA==AA==
+'''

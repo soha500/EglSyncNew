@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _B7LSplXuEeyXQOB43nOgrg, name   =end component297 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport241 = Inport241
+          self.__Inport597 = Inport597
+          self.__Outport147 = Outport147
+          self.__Outport153 = Outport153
+     
+     # Generate setter and getter for all inports in component297 class
+ 
+  	    def setInport241(self):
+	    	#sync _B7dmgVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport241 = Inport241 
+   		
+   		def getInport241(self):
+	    	#sync _B7dmgVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport241   
+ 
+  	    def setInport597(self):
+	    	#sync _B8EDd1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport597 = Inport597 
+   		
+   		def getInport597(self):
+	    	#sync _B8EDd1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport597   
+  	
+  	# Generate setter and getter for all outports in component297 class
+ 
+  	    def setOutport147(self):
+	    	#sync _B7W42FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport147 = Outport147
+   		
+   		def getOutport147(self):
+	    	#sync _B7W42FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport147   
+ 
+  	    def setOutport153(self):
+	    	#sync _B7W46lXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport153 = Outport153
+   		
+   		def getOutport153(self):
+	    	#sync _B7W46lXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport153   
+	 
+	def execute(self, int Inport241, int Inport597):
+		
+		#sync _B7LSplXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==bgDIIA==bIU3loL4pHxZ/rug0R/jAdH48lwJIA==e5hYunjvASA=3QN+72mNAdH1tlanunjvASA=3QN+GXBmIA==rRHki3+KASA=3QN+oJxkAdH159Azi3+KASA=3QN+HtgffAk=iz1RIA==ZfQ2MpKyASA=3QN++t6cAdH1gv/SMpKyASA=3QN+O0gZIA==WrPxRfrIASA=3QN+zULfAdH1d7+ORfrIASA=3QN+O1RfATc=52C6ASA=TWfoCQ==oPk1AA==ASA=ASA=AA==
+'''

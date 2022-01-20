@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+</style>
+<body>
+
+<h2>This table shows all the information about [%=c.name%] component</h2>
+
+<table style="width:100%">
+  <tr style="background-color:orange">
+    <th> Neme of component </th>
+    <th> Decumentations </th>
+  </tr>
+  <tr>
+    <td>[%=c.name%]</td>
+    <td>    
+   		[%=out.startSync("<!--", "-->", c.id, "name")%]    			 
+				
+				
+		[%=out.endSync()%]
+	</td>
+  </tr>
+  </tr>
+</table>
+
+</body>
+</html>

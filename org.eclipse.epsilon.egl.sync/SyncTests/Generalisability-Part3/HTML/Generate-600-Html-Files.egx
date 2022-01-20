@@ -1,0 +1,11 @@
+rule ModelTo600Html 
+	transform m : Model {
+	template : "Generate-Html-Model2class.egl"
+	parameters : Map{"package"="syncregions"}
+	target : "gen-600-Components/" + m.name + ".html"	
+}
+rule ComponentTo600Html
+	transform c : Component {
+	template : "Generate-Html-Component2class.egl"
+	target : "gen-600-Components/" + c.name + '.html'	
+}

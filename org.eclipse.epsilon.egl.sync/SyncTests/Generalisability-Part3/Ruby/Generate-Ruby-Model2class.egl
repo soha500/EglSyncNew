@@ -1,0 +1,11 @@
+#Ruby
+class [%=out.startSync("=begin ", " =end", m.id, "name")%] [%=m.name%] [%=out.endSync()%] 
+  
+  def execute([%=m.inPorts.collect(p|p.type + " " + p.name).concat(", ")%])
+		
+		[%=out.startSync("#", m.id, "JavaBehaviour")%]    			 
+
+		[%=out.endSync()%]
+	
+  end
+end

@@ -1,0 +1,36 @@
+m.resource.useXmiIds = true;
+var m = new Model;
+m.name = "Model1";
+var numberOfComponent = 10;
+    for (comp in 1.to(numberOfComponent)) {
+    var component : Component = new Component;
+    component.name = "Component" + comp + "" ;
+    component.type;
+      
+     // var randominPorts = 1.to(4.to(6).random()).asSet();
+     //  for (inp in randominPorts) {
+       for (inp in 1.to(4.to(6).random())) {
+            var inport : Port = new Port;
+            component.inPorts.add(inport); 
+            inport.name = "inport" + inp + "" ; 
+            inport.type = "int"; 
+        }
+         
+      	//var randomoutPorts = 1.to(4.to(6).random()).asSet();	
+        //for (outp in randomoutPorts) {
+        for (outp in 1.to(4.to(6).random())) {
+            var outport : Port = new Port;
+            component.outPort.add(outport); 
+            outport.name = "outport" + outp + "" ; 
+            outport.type = "int"; 
+        }
+      for (connect in 1.to(4)) {
+            var connector : Connector = new Connector;
+            connector.source = Port.all.random(); 
+            connector.target = Port.all.random(); 
+            
+         
+            m.connectors.add(connector); 
+        }        	
+      m.components.add(component);   
+	}

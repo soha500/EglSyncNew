@@ -1,0 +1,71 @@
+
+m.resource.useXmiIds = true;
+
+var m = new Model;
+m.name = "Model1";
+
+//200 components = 400 conectors..
+var numberOfComponent = 800;
+for (comp in 1.to(numberOfComponent)) {
+	var component : Component = new Component;
+	component.name = "component" + comp + "" ;
+	component.HtmlBehaviour = "PythonBehaviour";
+	component.type;
+	        	
+	m.components.add(component);   
+}
+for (connect in 1.to(1600)) {
+    var connector : Connector = new Connector;
+    var inport : Port = new Port;
+    var outport : Port = new Port;
+    var component1 : Component = m.components.random(); // Component.all.random();
+    var component2 : Component = m.components.random();
+    
+    component1.inPorts.add(inport);
+    component2.outPort.add(outport);
+    
+    inport.name = "Inport" + connect + "";
+    outport.name = "Outport" + connect + "";
+    
+    inport.type = "int";
+    outport.type = "int";
+    
+    connector.source = inport; 
+    connector.target = outport;
+            
+    m.connectors.add(connector); 
+}
+	
+	/*
+     // var randominPorts = 1.to(4.to(6).random()).asSet();
+     //  for (inp in randominPorts) {
+     
+       var randominPorts = 1.to(4.to(6).random());
+       for (inp in randominPorts) {
+            var inport : Port = new Port;
+            component.inPorts.add(inport); 
+            inport.name = "inport" + inp + "" ; 
+            inport.type = "int"; 
+        }
+         
+      	//var randomoutPorts = 1.to(4.to(6).random()).asSet();	
+        //for (outp in randomoutPorts) {
+        var randomoutPorts = 1.to(4.to(6).random());	
+        for (outp in randomoutPorts) {
+            var outport : Port = new Port;
+            component.outPort.add(outport); 
+            outport.name = "outport" + outp + "" ; 
+            outport.type = "int"; 
+        }
+        
+        var ports = Port.all;
+      	for (connect in 1.to(3)) {
+            var connector : Connector = new Connector;
+            connector.source = ports.at(connect*2); 
+            connector.target = ports.at(connect*2+1);
+            
+            m.connectors.add(connector); 
+        } 
+
+	
+	*/

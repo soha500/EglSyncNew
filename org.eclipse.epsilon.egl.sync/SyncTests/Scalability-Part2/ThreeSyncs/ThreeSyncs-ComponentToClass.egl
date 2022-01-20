@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+</style>
+<body>
+
+<h2>This table shows all the information about [%=c.name%] component</h2>
+
+<table style="width:100%">
+  <tr style="background-color:orange">
+    <th> Neme of component </th>
+    <th> Decumentations </th>
+  </tr>
+  <tr>
+    <td>[%=c.name%]</td>
+    <td>    
+   		[%=out.startSync("<!--", "-->", c.id, "name")%]    			 
+				
+				
+		[%=out.endSync()%]
+		
+		[%=out.startSync("<!--", "-->", c.id, "HtmlBehaviour")%]    			 
+				
+				
+		[%=out.endSync()%]
+		
+		[%=out.startSync("<!--", "-->", c.id, "AuthorName")%]    			 
+				
+				
+		[%=out.endSync()%]
+	</td>
+  </tr>
+  <tr style="background-color:orange">
+    <th>ALl ports in [%=c.name%] component</th>
+    <td> </td>
+  </tr>
+   [%for (port in c.inPorts){%]
+  <tr>
+   <td> [%=port.name%] </td>
+   <td> 
+
+   </td>
+  	 [%}%]
+  </tr>
+  </tr>
+   [%for (port in c.outPort){%]
+  <tr>
+   <td> [%=port.name%] </td>
+   <td> 
+
+   </td>
+  	 [%}%]
+  </tr>
+</table>
+
+</body>
+</html>
+
+[*
+#Python
+	
+class [%=c.name%] : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+     [%for (inport in c.inPorts){%]
+          self.__[%=inport.name%] = [%=inport.name%]
+      [%}%]
+     [%for (outport in c.outPort){%]
+          self.__[%=outport.name%] = [%=outport.name%]
+     [%}%]
+     
+     # Generate setter and getter for all inports in [%=c.name%] class
+  	[%for (inport in c.inPorts){%] 
+  	    def set[%=inport.name%](self):
+        self.__[%=inport.name%] = [%=inport.name%] 
+   		
+   		def get[%=inport.name%](self):
+   		
+        return self.__[%=inport.name%]   
+  	[%}%]
+  	
+  	# Generate setter and getter for all outports in [%=c.name%] class
+  	[%for (outport in c.outPort){%] 
+  	    def set[%=outport.name%](self):
+        self.__[%=outport.name%] = [%=outport.name%]
+   		
+   		def get[%=outport.name%](self):
+        return self.__[%=outport.name%]   
+  	[%}%]
+	 
+	def execute(self, [%=c.inPorts.collect(p|p.type + " " + p.name).concat(", ")%]):
+		
+		[%=out.startSync("#" , c.id, "PythonBehaviour")%]    			 
+	
+		[%=out.endSync()%]
+*]

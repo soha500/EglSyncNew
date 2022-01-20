@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _B7KEiVXuEeyXQOB43nOgrg, name   =end component239 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport763 = Inport763
+          self.__Outport42 = Outport42
+          self.__Outport616 = Outport616
+          self.__Outport795 = Outport795
+     
+     # Generate setter and getter for all inports in component239 class
+ 
+  	    def setInport763(self):
+	    	#sync _B8cd8VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport763 = Inport763 
+   		
+   		def getInport763(self):
+	    	#sync _B8cd8VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport763   
+  	
+  	# Generate setter and getter for all outports in component239 class
+ 
+  	    def setOutport42(self):
+	    	#sync _B7QyOFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport42 = Outport42
+   		
+   		def getOutport42(self):
+	    	#sync _B7QyOFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport42   
+ 
+  	    def setOutport616(self):
+	    	#sync _B8GfuFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport616 = Outport616
+   		
+   		def getOutport616(self):
+	    	#sync _B8GfuFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport616   
+ 
+  	    def setOutport795(self):
+	    	#sync _B8gva1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport795 = Outport795
+   		
+   		def getOutport795(self):
+	    	#sync _B8gva1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport795   
+	 
+	def execute(self, int Inport763):
+		
+		#sync _B7KEiVXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==1lCsIA==bIU3+I2+vJp2dyT/RbRqAdH47OFzIA==OVLFPW1YASA=3QN+zreYAdH1dBEVPW1YASA=3QN+IhW5fAk=hcK6IA==0e+hm+G9ASA=3QN+HUxyAdH1DK3xm+G9ASA=3QN+jnWtIA==BrTxR9mQASA=3QN+c0f7AdH1I8COR9mQASA=3QN+Q6WZIA==NUCuGAEaASA=3QN+QddmAdH1UkxKGAEaASA=3QN+Rcq5ATc=q1ceASA=Fw9RCQ==oPk1AA==ASA=ASA=AA==
+'''

@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _P8Ir91XuEeyXQOB43nOgrg, name   =end component878 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport957 = Inport957
+          self.__Inport1099 = Inport1099
+          self.__Inport1155 = Inport1155
+          self.__Outport710 = Outport710
+     
+     # Generate setter and getter for all inports in component878 class
+ 
+  	    def setInport957(self):
+	    	#sync _P-UdR1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport957 = Inport957 
+   		
+   		def getInport957(self):
+	    	#sync _P-UdR1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport957   
+ 
+  	    def setInport1099(self):
+	    	#sync _P-y-YVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1099 = Inport1099 
+   		
+   		def getInport1099(self):
+	    	#sync _P-y-YVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1099   
+ 
+  	    def setInport1155(self):
+	    	#sync _P-_ysVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1155 = Inport1155 
+   		
+   		def getInport1155(self):
+	    	#sync _P-_ysVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1155   
+  	
+  	# Generate setter and getter for all outports in component878 class
+ 
+  	    def setOutport710(self):
+	    	#sync _P9ogxVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport710 = Outport710
+   		
+   		def getOutport710(self):
+	    	#sync _P9ogxVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport710   
+	 
+	def execute(self, int Inport957, int Inport1099, int Inport1155):
+		
+		#sync _P8Ir91XuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==lqzsIA==bIU3hHLqXB58TsuNDYQnAdH40RqFIA==LSXs30aBASA=3QN+v3f1AdH1Z+Q730aBASA=3QN+JXMkIA==sZEnMniFASA=3QN+r+2IAdH1zpzEMniFASA=3QN+2V7aIA==tUQpEBCVASA=3QN+EuKqAdH10k/FEBCVASA=3QN+2tmDfAk=afvNIA==i7dVGJObASA=3QN+CacjAdH1qMLyGJObASA=3QN+RVe3ATc=O5PLASA=wiikCQ==oPk1AA==ASA=ASA=AA==
+'''

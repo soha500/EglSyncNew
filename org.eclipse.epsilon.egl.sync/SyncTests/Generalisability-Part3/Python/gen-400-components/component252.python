@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _B7KEllXuEeyXQOB43nOgrg, name   =end component252 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport45 = Inport45
+          self.__Inport131 = Inport131
+          self.__Inport187 = Inport187
+          self.__Inport295 = Inport295
+     
+     # Generate setter and getter for all inports in component252 class
+ 
+  	    def setInport45(self):
+	    	#sync _B7QyQFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport45 = Inport45 
+   		
+   		def getInport45(self):
+	    	#sync _B7QyQFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport45   
+ 
+  	    def setInport131(self):
+	    	#sync _B7VqulXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport131 = Inport131 
+   		
+   		def getInport131(self):
+	    	#sync _B7VqulXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport131   
+ 
+  	    def setInport187(self):
+	    	#sync _B7ZVF1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport187 = Inport187 
+   		
+   		def getInport187(self):
+	    	#sync _B7ZVF1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport187   
+ 
+  	    def setInport295(self):
+	    	#sync _B7h391XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport295 = Inport295 
+   		
+   		def getInport295(self):
+	    	#sync _B7h391XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport295   
+  	
+  	# Generate setter and getter for all outports in component252 class
+	 
+	def execute(self, int Inport45, int Inport131, int Inport187, int Inport295):
+		
+		#sync _B7KEllXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==9JvPIA==bIU3qH7dWsnAWzDYueQCAdH4SlguIA==s2bTIbqQASA=3QN+antOAdH1ECKkIbqQASA=3QN+EXKYIA==8wp4XP+CASA=3QN+s/vNAdH1LcjHXP+CASA=3QN+F612IA==R6ewVG1WASA=3QN+wHetAdH1gmX/VG1WASA=3QN+F/alIA==czb7bvsjASA=3QN+OCnaAdH1OzGGbvsjASA=3QN+GbitfAk=4zl1ATc=Tp7dASA=E3QSCQ==oPk1AA==ASA=ASA=AA==
+'''

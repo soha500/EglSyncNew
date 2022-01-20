@@ -1,0 +1,165 @@
+#Python
+	
+class =begin sync _XP0z4U4KEey8ms5zKeMjoQ, name   =end Component3 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport1 = Inport1
+          self.__Inport2 = Inport2
+          self.__Inport3 = Inport3
+          self.__Inport4 = Inport4
+          self.__Inport5 = Inport5
+          self.__Inport6 = Inport6
+          self.__Outport1 = Outport1
+          self.__Outport2 = Outport2
+          self.__Outport3 = Outport3
+          self.__Outport4 = Outport4
+          self.__Outport5 = Outport5
+     
+     # Generate setter and getter for all inports in Component3 class
+ 
+  	    def setInport1(self):
+	    	#sync _XP0z4k4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1 = Inport1 
+   		
+   		def getInport1(self):
+	    	#sync _XP0z4k4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1   
+ 
+  	    def setInport2(self):
+	    	#sync _XP0z404KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport2 = Inport2 
+   		
+   		def getInport2(self):
+	    	#sync _XP0z404KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport2   
+ 
+  	    def setInport3(self):
+	    	#sync _XP0z5E4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport3 = Inport3 
+   		
+   		def getInport3(self):
+	    	#sync _XP0z5E4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport3   
+ 
+  	    def setInport4(self):
+	    	#sync _XP0z5U4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport4 = Inport4 
+   		
+   		def getInport4(self):
+	    	#sync _XP0z5U4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport4   
+ 
+  	    def setInport5(self):
+	    	#sync _XP0z5k4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport5 = Inport5 
+   		
+   		def getInport5(self):
+	    	#sync _XP0z5k4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport5   
+ 
+  	    def setInport6(self):
+	    	#sync _XP0z504KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport6 = Inport6 
+   		
+   		def getInport6(self):
+	    	#sync _XP0z504KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport6   
+  	
+  	# Generate setter and getter for all outports in Component3 class
+ 
+  	    def setOutport1(self):
+	    	#sync _XP0z6E4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport1 = Outport1
+   		
+   		def getOutport1(self):
+	    	#sync _XP0z6E4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport1   
+ 
+  	    def setOutport2(self):
+	    	#sync _XP1a8E4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport2 = Outport2
+   		
+   		def getOutport2(self):
+	    	#sync _XP1a8E4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport2   
+ 
+  	    def setOutport3(self):
+	    	#sync _XP1a8U4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport3 = Outport3
+   		
+   		def getOutport3(self):
+	    	#sync _XP1a8U4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport3   
+ 
+  	    def setOutport4(self):
+	    	#sync _XP1a8k4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport4 = Outport4
+   		
+   		def getOutport4(self):
+	    	#sync _XP1a8k4KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport4   
+ 
+  	    def setOutport5(self):
+	    	#sync _XP1a804KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport5 = Outport5
+   		
+   		def getOutport5(self):
+	    	#sync _XP1a804KEey8ms5zKeMjoQ, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport5   
+	 
+	def execute(self, int Inport1, int Inport2, int Inport3, int Inport4, int Inport5, int Inport6):
+		
+		#sync _XP0z4U4KEey8ms5zKeMjoQ, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==ATAfIA==bIU3em43D1LppDecORxPzgECYuW0l9Oun4VTpzb5ruietppDAdH46btsIA==8ELdwiiaASA=3QN+VEgvAdH1ThdfwiiaASA=3QN+10QWIA==WCQKKa2iASA=3QN+W/nUAdH1tfiMKa2iASA=3QN+10SLIA==wAU2uvghASA=3QN+Y6t6AdH1Hdm5uvghASA=3QN+10T/IA==J+ZjDw8NASA=3QN+a10fAdH1hbrmDw8NASA=3QN+10V0IA==j8eQwq6RASA=3QN+cw7FAdH17ZwTwq6RASA=3QN+10XoIA==96i97JoLASA=3QN+esBqAdH1VX1A7JoLASA=3QN+10ZcfAk=Y+W+IA==h6+mfeSKASA=3QN+NNSqAdH15Gt3feSKASA=3QN+Vyt1IA==75DTo4HsASA=3QN+PIZPAdH1TEyko4HsASA=3QN+VyvpIA==V3H/95jYASA=3QN+RDf1AdH1tC3Q95jYASA=3QN+VyxeIA==v1MsqzhdASA=3QN+S+maAdH1HA79qzhdASA=3QN+VyzSIA==JzRZ1SPWASA=3QN+U5s/AdH1g/Aq1SPWASA=3QN+Vy1GATc=qDXrASA=aKtsCQ==oPk1AA==ASA=ASA=AA==
+'''

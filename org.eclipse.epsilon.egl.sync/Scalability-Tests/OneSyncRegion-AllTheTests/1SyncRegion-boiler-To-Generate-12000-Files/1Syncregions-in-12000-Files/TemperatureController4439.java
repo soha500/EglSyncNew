@@ -1,0 +1,17 @@
+package syncregions;
+
+public class TemperatureController4439 {
+	
+	public execute(int temperature4439, int targetTemperature4439) { 
+		
+		//sync _bfpnFUbFEeqXnfGWlV4439, behaviour     			 
+
+
+		//endSync
+
+	}
+
+}
+/*
+hfrVAA==lEUlCQ==PlnoASA=BeguAA==AZQ=AA==fQ==
+*/

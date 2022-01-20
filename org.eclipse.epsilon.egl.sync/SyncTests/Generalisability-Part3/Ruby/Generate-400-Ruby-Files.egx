@@ -1,0 +1,16 @@
+
+rule Model2Class 
+	transform m : Model {
+	template : "Generate-Ruby-Model2class.egl"
+	parameters : Map{"package"="syncregions"}
+	target : "gen-400-Components/" + m.name + '.ruby'	
+}
+
+rule Component2Class 
+	transform c : Component {
+	template : "Generate-Ruby-Component2class.egl"
+	target : "gen-400-Components/" + c.name + ".ruby"
+}
+
+
+

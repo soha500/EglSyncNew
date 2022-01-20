@@ -1,0 +1,139 @@
+#Python
+	
+class =begin sync _GRWBoVXuEeyXQOB43nOgrg, name   =end component138 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport128 = Inport128
+          self.__Inport218 = Inport218
+          self.__Inport508 = Inport508
+          self.__Inport773 = Inport773
+          self.__Inport1040 = Inport1040
+          self.__Inport1153 = Inport1153
+          self.__Outport435 = Outport435
+          self.__Outport499 = Outport499
+          self.__Outport546 = Outport546
+     
+     # Generate setter and getter for all inports in component138 class
+ 
+  	    def setInport128(self):
+	    	#sync _GR1J1FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport128 = Inport128 
+   		
+   		def getInport128(self):
+	    	#sync _GR1J1FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport128   
+ 
+  	    def setInport218(self):
+	    	#sync _GR-TxFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport218 = Inport218 
+   		
+   		def getInport218(self):
+	    	#sync _GR-TxFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport218   
+ 
+  	    def setInport508(self):
+	    	#sync _GSi7nFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport508 = Inport508 
+   		
+   		def getInport508(self):
+	    	#sync _GSi7nFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport508   
+ 
+  	    def setInport773(self):
+	    	#sync _GS1PYVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport773 = Inport773 
+   		
+   		def getInport773(self):
+	    	#sync _GS1PYVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport773   
+ 
+  	    def setInport1040(self):
+	    	#sync _GTPfIFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1040 = Inport1040 
+   		
+   		def getInport1040(self):
+	    	#sync _GTPfIFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1040   
+ 
+  	    def setInport1153(self):
+	    	#sync _GTdhilXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1153 = Inport1153 
+   		
+   		def getInport1153(self):
+	    	#sync _GTdhilXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1153   
+  	
+  	# Generate setter and getter for all outports in component138 class
+ 
+  	    def setOutport435(self):
+	    	#sync _GSZKiFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport435 = Outport435
+   		
+   		def getOutport435(self):
+	    	#sync _GSZKiFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport435   
+ 
+  	    def setOutport499(self):
+	    	#sync _GSi7glXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport499 = Outport499
+   		
+   		def getOutport499(self):
+	    	#sync _GSi7glXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport499   
+ 
+  	    def setOutport546(self):
+	    	#sync _GSlX11XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport546 = Outport546
+   		
+   		def getOutport546(self):
+	    	#sync _GSlX11XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport546   
+	 
+	def execute(self, int Inport128, int Inport218, int Inport508, int Inport773, int Inport1040, int Inport1153):
+		
+		#sync _GRWBoVXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==GwSCIA==bIU3/oEkdn7IojNI2muIqglRiw/6hdpHKHXsoyVcAdH4I7bIIA==Ne5Dto8sASA=3QN+hzDjAdH1cKySto8sASA=3QN+F6KNIA==lfNF6onIASA=3QN+DufHAdH10LGU6onIASA=3QN+GUlOIA==3osptpb6ASA=3QN+WcNQAdH1GUl5tpb6ASA=3QN+HlnAIA==zZc0lNVFASA=3QN+KJMGAdH1CFWElNVFASA=3QN+IiPQIA==JVBpRrzGASA=3QN+H11iAdH1QlwFRrzGASA=3QN+2RRNIA==5YHPXpj4ASA=3QN+XyvVAdH1Ao1sXpj4ASA=3QN+2tibfAk=vJgQIA==3snAHobQASA=3QN+gf1DAdH1+9VdHobQASA=3QN+QFeiIA==9+kOadaJASA=3QN+JJjoAdH1FPSqadaJASA=3QN+QK4BIA==zzjNkQOEASA=3QN+n0hYAdH17ERqkQOEASA=3QN+QhsHATc=HAqMASA=DylYCQ==oPk1AA==ASA=ASA=AA==
+'''

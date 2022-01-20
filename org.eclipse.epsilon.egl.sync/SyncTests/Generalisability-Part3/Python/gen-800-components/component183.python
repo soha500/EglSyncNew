@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _LOBXAlXuEeyXQOB43nOgrg, name   =end component183 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Outport238 = Outport238
+          self.__Outport309 = Outport309
+          self.__Outport598 = Outport598
+          self.__Outport1171 = Outport1171
+     
+     # Generate setter and getter for all inports in component183 class
+  	
+  	# Generate setter and getter for all outports in component183 class
+ 
+  	    def setOutport238(self):
+	    	#sync _LOobCFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport238 = Outport238
+   		
+   		def getOutport238(self):
+	    	#sync _LOobCFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport238   
+ 
+  	    def setOutport309(self):
+	    	#sync _LOwW1VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport309 = Outport309
+   		
+   		def getOutport309(self):
+	    	#sync _LOwW1VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport309   
+ 
+  	    def setOutport598(self):
+	    	#sync _LPZ3FVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport598 = Outport598
+   		
+   		def getOutport598(self):
+	    	#sync _LPZ3FVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport598   
+ 
+  	    def setOutport1171(self):
+	    	#sync _LQ_yglXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport1171 = Outport1171
+   		
+   		def getOutport1171(self):
+	    	#sync _LQ_yglXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport1171   
+	 
+	def execute(self, ):
+		
+		#sync _LOBXAlXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==SrvBIA==bIU3aE/gHi1NKCoEPd7JAdH4Ip2AfAk=u37IIA==LdpllbvUASA=3QN+ZHLcAdH1SuYBlbvUASA=3QN+PO9OIA==zTe2XAdpASA=3QN+GlBJAdH16kNSXAdpASA=3QN+PnpVIA==hFFSDb/PASA=3QN+JE0AAdH1oVzuDb/PASA=3QN+QmJlIA==urJHPp4CASA=3QN+vTLFAdH1Pxo0Pp4CASA=3QN+KKQ4ATc=vTWDASA=j9a9CQ==oPk1AA==ASA=ASA=AA==
+'''

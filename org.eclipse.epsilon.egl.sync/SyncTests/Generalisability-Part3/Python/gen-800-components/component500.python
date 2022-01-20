@@ -1,0 +1,35 @@
+#Python
+	
+class =begin sync _LOKg9VXuEeyXQOB43nOgrg, name   =end component500 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Outport1081 = Outport1081
+     
+     # Generate setter and getter for all inports in component500 class
+  	
+  	# Generate setter and getter for all outports in component500 class
+ 
+  	    def setOutport1081(self):
+	    	#sync _LQsQiFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport1081 = Outport1081
+   		
+   		def getOutport1081(self):
+	    	#sync _LQsQiFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport1081   
+	 
+	def execute(self, ):
+		
+		#sync _LOKg9VXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==8j7MIA==bIU3zsbFAdH4lfMkfAk=LtRsIA==Wq1FEPkRASA=3QN+ThrBAdH13xUxEPkRASA=3QN+Jv13ATc=vTWDASA=WXNNCQ==oPk1AA==ASA=ASA=AA==
+'''

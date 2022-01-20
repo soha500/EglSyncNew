@@ -1,0 +1,87 @@
+#Python
+	
+class =begin sync _P71J-1XuEeyXQOB43nOgrg, name   =end component309 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport1018 = Inport1018
+          self.__Outport116 = Outport116
+          self.__Outport385 = Outport385
+          self.__Outport885 = Outport885
+          self.__Outport1267 = Outport1267
+     
+     # Generate setter and getter for all inports in component309 class
+ 
+  	    def setInport1018(self):
+	    	#sync _P-gqgVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1018 = Inport1018 
+   		
+   		def getInport1018(self):
+	    	#sync _P-gqgVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1018   
+  	
+  	# Generate setter and getter for all outports in component309 class
+ 
+  	    def setOutport116(self):
+	    	#sync _P8XVeFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport116 = Outport116
+   		
+   		def getOutport116(self):
+	    	#sync _P8XVeFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport116   
+ 
+  	    def setOutport385(self):
+	    	#sync _P84S21XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport385 = Outport385
+   		
+   		def getOutport385(self):
+	    	#sync _P84S21XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport385   
+ 
+  	    def setOutport885(self):
+	    	#sync _P-HB4lXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport885 = Outport885
+   		
+   		def getOutport885(self):
+	    	#sync _P-HB4lXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport885   
+ 
+  	    def setOutport1267(self):
+	    	#sync _P_dFuFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport1267 = Outport1267
+   		
+   		def getOutport1267(self):
+	    	#sync _P_dFuFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport1267   
+	 
+	def execute(self, int Inport1018):
+		
+		#sync _P71J-1XuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==rTucIA==bIU3q2VfD0uXZZF5zWrhyBtKAdH4SYJbIA==p4yC47H9ASA=3QN+SYMQAdH1xJgf47H9ASA=3QN+2O2qfAk=4mOjIA==QUW86QwTASA=3QN+C26TAdH1XlFY6QwTASA=3QN+Ox1eIA==z9Z6YOLOASA=3QN+YbR1AdH17OIXYOLOASA=3QN+Puk/IA==lUWw6TqoASA=3QN+yY3dAdH1slFM6TqoASA=3QN+R3F6IA==if5XBPz4ASA=3QN+R29GAdH1DmZDBPz4ASA=3QN+Kk20ATc=tPpVASA=nUXiCQ==oPk1AA==ASA=ASA=AA==
+'''

@@ -1,0 +1,48 @@
+#Python
+	
+class =begin sync _P7yGqFXuEeyXQOB43nOgrg, name   =end component232 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport1134 = Inport1134
+          self.__Outport232 = Outport232
+     
+     # Generate setter and getter for all inports in component232 class
+ 
+  	    def setInport1134(self):
+	    	#sync _P-66MVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1134 = Inport1134 
+   		
+   		def getInport1134(self):
+	    	#sync _P-66MVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1134   
+  	
+  	# Generate setter and getter for all outports in component232 class
+ 
+  	    def setOutport232(self):
+	    	#sync _P8kw1VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport232 = Outport232
+   		
+   		def getOutport232(self):
+	    	#sync _P8kw1VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport232   
+	 
+	def execute(self, int Inport1134):
+		
+		#sync _P7yGqFXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==m2EYIA==bIU3uTbvHR0nAdH4epXUIA==JNoe9MBaASA=3QN+9eN8AdH1QeW69MBaASA=3QN+2rzgfAk=E3ccIA==vpNYV7YtASA=3QN+GUAjAdH12570V7YtASA=3QN+POyUATc=tQlGASA=jC2CCQ==oPk1AA==ASA=ASA=AA==
+'''

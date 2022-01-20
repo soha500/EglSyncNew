@@ -1,0 +1,13 @@
+rule ModelTo200Python 
+	transform m : Model {
+	template : "Generate-Python-Model2class.egl"
+	parameters : Map{"package"="syncregions"}
+	target : "gen-200-components/" + m.name + '.python'
+}
+
+rule ComponentTo200Python
+	transform c : Component {
+	template : "Generate-Python-ComponentToClass.egl"
+	target : "gen-200-components/" + c.name + '.python'	
+}
+

@@ -1,0 +1,11 @@
+rule Component2Class 
+	transform c : Component {
+
+	template : "MultipleSyncRegions-component2class-in-4000-Files.egl"
+
+	target : "MultipleSyncRegions-in-4000-Files/" + c.name + ".java"
+	
+}
+
+
+

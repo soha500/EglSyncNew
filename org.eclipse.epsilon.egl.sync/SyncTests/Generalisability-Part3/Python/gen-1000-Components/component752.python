@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _P8EailXuEeyXQOB43nOgrg, name   =end component752 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport547 = Inport547
+          self.__Inport916 = Inport916
+          self.__Outport100 = Outport100
+          self.__Outport412 = Outport412
+     
+     # Generate setter and getter for all inports in component752 class
+ 
+  	    def setInport547(self):
+	    	#sync _P9O4IVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport547 = Inport547 
+   		
+   		def getInport547(self):
+	    	#sync _P9O4IVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport547   
+ 
+  	    def setInport916(self):
+	    	#sync _P-MhelXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport916 = Inport916 
+   		
+   		def getInport916(self):
+	    	#sync _P-MhelXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport916   
+  	
+  	# Generate setter and getter for all outports in component752 class
+ 
+  	    def setOutport100(self):
+	    	#sync _P8WHUlXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport100 = Outport100
+   		
+   		def getOutport100(self):
+	    	#sync _P8WHUlXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport100   
+ 
+  	    def setOutport412(self):
+	    	#sync _P879OFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport412 = Outport412
+   		
+   		def getOutport412(self):
+	    	#sync _P879OFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport412   
+	 
+	def execute(self, int Inport547, int Inport916):
+		
+		#sync _P8EailXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==UNI0IA==bIU3OydpDni9aj1zLIoVAdH4L65ZIA==x7u5UjPPASA=3QN+31M+AdH1AnoIUjPPASA=3QN+HpGqIA==dDMDy612ASA=3QN+dix0AdH1rvFTy612ASA=3QN+JTpRfAk=yI+gIA==PbpAk7m9ASA=3QN+ZmBvAdH1WsXck7m9ASA=3QN+OwyMIA==fp1cvBu7ASA=3QN+KK0RAdH1m6j4vBu7ASA=3QN+QDoWATc=OeZCASA=+gXLCQ==oPk1AA==ASA=ASA=AA==
+'''

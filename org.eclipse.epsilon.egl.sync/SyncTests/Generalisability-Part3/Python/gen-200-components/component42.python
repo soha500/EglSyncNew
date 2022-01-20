@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _9yWcI1XtEeyXQOB43nOgrg, name   =end component42 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport122 = Inport122
+          self.__Inport187 = Inport187
+          self.__Outport107 = Outport107
+          self.__Outport251 = Outport251
+     
+     # Generate setter and getter for all inports in component42 class
+ 
+  	    def setInport122(self):
+	    	#sync _9ykegVXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport122 = Inport122 
+   		
+   		def getInport122(self):
+	    	#sync _9ykegVXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport122   
+ 
+  	    def setInport187(self):
+	    	#sync _9yqlNlXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport187 = Inport187 
+   		
+   		def getInport187(self):
+	    	#sync _9yqlNlXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport187   
+  	
+  	# Generate setter and getter for all outports in component42 class
+ 
+  	    def setOutport107(self):
+	    	#sync _9yiCXVXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport107 = Outport107
+   		
+   		def getOutport107(self):
+	    	#sync _9yiCXVXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport107   
+ 
+  	    def setOutport251(self):
+	    	#sync _9yvdqFXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport251 = Outport251
+   		
+   		def getOutport251(self):
+	    	#sync _9yvdqFXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport251   
+	 
+	def execute(self, int Inport122, int Inport187):
+		
+		#sync _9yWcI1XtEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==2030IA==bIU3Z279WzDYl0327vYyAdH4EDBkIA==xqc2rHW7ASA=3QN+O/4pAdH1AWWFrHW7ASA=3QN+F5/SIA==R6ew6jGYASA=3QN+wHetAdH1gmX/6jGYASA=3QN+F/alfAk=21BuIA==FOJ6RFKeASA=3QN+k3DyAdH1Me4WRFKeASA=3QN+Ow+7IA==fzsJUx1AASA=3QN+6xkuAdH1nEalUx1AASA=3QN+PQhOATc=KMMwASA=HDyTCQ==oPk1AA==ASA=ASA=AA==
+'''

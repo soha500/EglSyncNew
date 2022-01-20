@@ -1,0 +1,46 @@
+#Python
+	
+class [%=out.startSync("=begin ", " =end", m.id, "name")%] [%=m.name%] [%=out.endSync()%] : 
+ 
+# for components in the model
+    def __init__(): # constractor 
+    [%for (component in m.components){%] 
+         self.[%=component.name%] = [%=component.name%];
+   	[%}%] 
+# for ports in the model   	
+   	def __init__(): # constractor
+   	[%for (port in Port){%] 
+         self.[%=port.name%] = [%=port.name%];
+   	[%}%] 
+   	
+   	   
+
+[*	
+	def [%=m.outPort.type%] execute([%=m.inPorts.collect(p|p.type + " " + p.name).concat(", ")%]):
+		
+		[%for (child in m.components){%]
+		[%=child.name%] [%=child.name.ftlc()%] = new [%=child.name%]();
+		[%=child.outPort.type%] [%=child.name.ftlc()%]Result = [%=child.name.ftlc()%].execute([%=child.getInputParameters().concat(", ")%]);
+		[%}%]
+		
+		return [%=m.outPort.incoming.source.eContainer().name.ftlc() + "Result"%];
+
+*]
+
+
+[*
+[%
+def Component getInputParameters() :
+	var parameters : Sequence;
+	for (p in self.inPorts) {
+	
+		if (p.println("Port").incoming.println("incoming").source.println("source").eContainer().isTypeOf(Model)) {
+		
+			parameters.add(p.incoming.source.name);
+		}
+		else {
+			parameters.add(p.incoming.source.eContainer().name.ftlc() + "Result");
+		}
+	}
+	return parameters;
+%]*]

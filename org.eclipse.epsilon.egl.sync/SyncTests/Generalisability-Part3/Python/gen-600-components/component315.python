@@ -1,0 +1,152 @@
+#Python
+	
+class =begin sync _GRd9f1XuEeyXQOB43nOgrg, name   =end component315 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport502 = Inport502
+          self.__Inport723 = Inport723
+          self.__Inport769 = Inport769
+          self.__Inport964 = Inport964
+          self.__Outport49 = Outport49
+          self.__Outport106 = Outport106
+          self.__Outport381 = Outport381
+          self.__Outport596 = Outport596
+          self.__Outport815 = Outport815
+          self.__Outport1191 = Outport1191
+     
+     # Generate setter and getter for all inports in component315 class
+ 
+  	    def setInport502(self):
+	    	#sync _GSi7ilXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport502 = Inport502 
+   		
+   		def getInport502(self):
+	    	#sync _GSi7ilXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport502   
+ 
+  	    def setInport723(self):
+	    	#sync _GSw9_VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport723 = Inport723 
+   		
+   		def getInport723(self):
+	    	#sync _GSw9_VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport723   
+ 
+  	    def setInport769(self):
+	    	#sync _GS0oXVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport769 = Inport769 
+   		
+   		def getInport769(self):
+	    	#sync _GS0oXVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport769   
+ 
+  	    def setInport964(self):
+	    	#sync _GTG8PVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport964 = Inport964 
+   		
+   		def getInport964(self):
+	    	#sync _GTG8PVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport964   
+  	
+  	# Generate setter and getter for all outports in component315 class
+ 
+  	    def setOutport49(self):
+	    	#sync _GRt1J1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport49 = Outport49
+   		
+   		def getOutport49(self):
+	    	#sync _GRt1J1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport49   
+ 
+  	    def setOutport106(self):
+	    	#sync _GRytm1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport106 = Outport106
+   		
+   		def getOutport106(self):
+	    	#sync _GRytm1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport106   
+ 
+  	    def setOutport381(self):
+	    	#sync _GSTD61XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport381 = Outport381
+   		
+   		def getOutport381(self):
+	    	#sync _GSTD61XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport381   
+ 
+  	    def setOutport596(self):
+	    	#sync _GSobGlXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport596 = Outport596
+   		
+   		def getOutport596(self):
+	    	#sync _GSobGlXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport596   
+ 
+  	    def setOutport815(self):
+	    	#sync _GS4SwVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport815 = Outport815
+   		
+   		def getOutport815(self):
+	    	#sync _GS4SwVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport815   
+ 
+  	    def setOutport1191(self):
+	    	#sync _GTjBElXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport1191 = Outport1191
+   		
+   		def getOutport1191(self):
+	    	#sync _GTjBElXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport1191   
+	 
+	def execute(self, int Inport502, int Inport723, int Inport769, int Inport964):
+		
+		#sync _GRd9f1XuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==IhUxIA==bIU3CyEhcRaXj5/lmsehQi+ktXAs3hpTZG5wWGr5AQKFAdH43cqbIA==b0Qc769bASA=3QN+DpCWAdH1qgJs769bASA=3QN+HlcGIA==6EEJ+J79ASA=3QN+Z0ngAdH1Iv9Z+J79ASA=3QN+Id1bIA==qJnT0ejbASA=3QN+GepSAdH141gi0ejbASA=3QN+IhhzIA==icbUoTOmASA=3QN+c7oGAdH1xIUkoTOmASA=3QN+JX/efAk=dqvjIA==qRfbYd5zASA=3QN+ouGgAdH149YrYd5zASA=3QN+jnjbIA==rQFNH5mHASA=3QN+sZMoAdH1ygzpH5mHASA=3QN+Ow9GIA==MFHH590ZASA=3QN+2j1PAdH1TV1j590ZASA=3QN+PuduIA==tI74XhdaASA=3QN+YJFsAdH10ZqVXhdaASA=3QN+QmF8IA==h2anaNKOASA=3QN+VI31AdH1pHJDaNKOASA=3QN+Rw7WIA==4zslWkqZASA=3QN+gFaBAdH1Z6MSWkqZASA=3QN+KMBnATc=G7SPASA=Dc/8CQ==oPk1AA==ASA=ASA=AA==
+'''

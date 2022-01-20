@@ -1,0 +1,126 @@
+#Python
+	
+class =begin sync _9yWcJFXtEeyXQOB43nOgrg, name   =end component43 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport88 = Inport88
+          self.__Inport172 = Inport172
+          self.__Inport195 = Inport195
+          self.__Inport203 = Inport203
+          self.__Outport47 = Outport47
+          self.__Outport281 = Outport281
+          self.__Outport364 = Outport364
+          self.__Outport376 = Outport376
+     
+     # Generate setter and getter for all inports in component43 class
+ 
+  	    def setInport88(self):
+	    	#sync _9yhbMFXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport88 = Inport88 
+   		
+   		def getInport88(self):
+	    	#sync _9yhbMFXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport88   
+ 
+  	    def setInport172(self):
+	    	#sync _9yp-GlXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport172 = Inport172 
+   		
+   		def getInport172(self):
+	    	#sync _9yp-GlXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport172   
+ 
+  	    def setInport195(self):
+	    	#sync _9yrMQFXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport195 = Inport195 
+   		
+   		def getInport195(self):
+	    	#sync _9yrMQFXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport195   
+ 
+  	    def setInport203(self):
+	    	#sync _9yrzSlXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport203 = Inport203 
+   		
+   		def getInport203(self):
+	    	#sync _9yrzSlXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport203   
+  	
+  	# Generate setter and getter for all outports in component43 class
+ 
+  	    def setOutport47(self):
+	    	#sync _9yciwVXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport47 = Outport47
+   		
+   		def getOutport47(self):
+	    	#sync _9yciwVXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport47   
+ 
+  	    def setOutport281(self):
+	    	#sync _9yyg_lXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport281 = Outport281
+   		
+   		def getOutport281(self):
+	    	#sync _9yyg_lXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport281   
+ 
+  	    def setOutport364(self):
+	    	#sync _9y51u1XtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport364 = Outport364
+   		
+   		def getOutport364(self):
+	    	#sync _9y51u1XtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport364   
+ 
+  	    def setOutport376(self):
+	    	#sync _9y7D0lXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport376 = Outport376
+   		
+   		def getOutport376(self):
+	    	#sync _9y7D0lXtEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport376   
+	 
+	def execute(self, int Inport88, int Inport172, int Inport195, int Inport203):
+		
+		#sync _9yWcJFXtEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==8SXnIA==bIU3eZ/n0MPtYAiU7BHeZSmX/Ihxz/zb7ZPYAdH4RRafIA==PBwWkBMrASA=3QN+vXuYAdH1mNfnkBMrASA=3QN+EaxTIA==q/1hzrNLASA=3QN+/UdPAdH15ruwzrNLASA=3QN+F+ZIIA==DCnFK0BkASA=3QN+VpeIAdH1RugVK0BkASA=3QN+GAPUIA==+kj25xHYASA=3QN+S7dpAdH1NQdF5xHYASA=3QN+GTjwfAk=EDaqIA==2VWCegLuASA=3QN+xduTAdH1FBPRegLuASA=3QN+jnfzIA==PAhWon04ASA=3QN++KttAdH1WRPyon04ASA=3QN+PTKVIA==P2xvqw8aASA=3QN+zB/XAdH1XHgMqw8aASA=3QN+PsycIA==o3M45EjFASA=3QN+6bbUAdH1wH7U5EjFASA=3QN+PtucATc=sP52ASA=rYcSCQ==oPk1AA==ASA=ASA=AA==
+'''

@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _P8BXRVXuEeyXQOB43nOgrg, name   =end component661 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport164 = Inport164
+          self.__Inport663 = Inport663
+          self.__Outport256 = Outport256
+          self.__Outport846 = Outport846
+     
+     # Generate setter and getter for all inports in component661 class
+ 
+  	    def setInport164(self):
+	    	#sync _P8c1AVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport164 = Inport164 
+   		
+   		def getInport164(self):
+	    	#sync _P8c1AVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport164   
+ 
+  	    def setInport663(self):
+	    	#sync _P9gk8VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport663 = Inport663 
+   		
+   		def getInport663(self):
+	    	#sync _P9gk8VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport663   
+  	
+  	# Generate setter and getter for all outports in component661 class
+ 
+  	    def setOutport256(self):
+	    	#sync _P8nNG1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport256 = Outport256
+   		
+   		def getOutport256(self):
+	    	#sync _P8nNG1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport256   
+ 
+  	    def setOutport846(self):
+	    	#sync _P9_tK1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport846 = Outport846
+   		
+   		def getOutport846(self):
+	    	#sync _P9_tK1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport846   
+	 
+	def execute(self, int Inport164, int Inport663):
+		
+		#sync _P8BXRVXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==fiitIA==bIU3y+wxnrJQWEsiR9sBAdH4zmTbIA==53tLcssnASA=3QN+Zyd0AdH1IjmbcssnASA=3QN+F9kZIA==RQlU/D/hASA=3QN+7SVGAdH1f8ek/D/hASA=3QN+IGDgfAk=Z0YjIA==hqDpXjm8ASA=3QN+VG4eAdH1o6yFXjm8ASA=3QN+PQqUIA==rBUh9UEaASA=3QN+Q/39AdH1ySC99UEaASA=3QN+RzmRATc=6NX5ASA=JxtPCQ==oPk1AA==ASA=ASA=AA==
+'''

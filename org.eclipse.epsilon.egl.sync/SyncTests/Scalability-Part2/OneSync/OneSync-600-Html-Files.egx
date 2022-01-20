@@ -1,0 +1,12 @@
+rule ModelTo200Html 
+	transform m : Model {
+	template : "OneSync-Model2class.egl"
+	parameters : Map{"package"="syncregions"}
+	target : "gen-600-components/" + m.name + '.html'
+}
+
+rule ComponentTo200Html
+	transform c : Component {
+	template : "OneSync-ComponentToClass.egl"
+	target : "gen-600-components/" + c.name + '.html'	
+}

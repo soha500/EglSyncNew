@@ -1,0 +1,87 @@
+#Python
+	
+class =begin sync _P7-7BlXuEeyXQOB43nOgrg, name   =end component572 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport26 = Inport26
+          self.__Inport661 = Inport661
+          self.__Inport790 = Inport790
+          self.__Inport1508 = Inport1508
+          self.__Inport1596 = Inport1596
+     
+     # Generate setter and getter for all inports in component572 class
+ 
+  	    def setInport26(self):
+	    	#sync _P8PZsFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport26 = Inport26 
+   		
+   		def getInport26(self):
+	    	#sync _P8PZsFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport26   
+ 
+  	    def setInport661(self):
+	    	#sync _P9f95FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport661 = Inport661 
+   		
+   		def getInport661(self):
+	    	#sync _P9f95FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport661   
+ 
+  	    def setInport790(self):
+	    	#sync _P918J1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport790 = Inport790 
+   		
+   		def getInport790(self):
+	    	#sync _P918J1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport790   
+ 
+  	    def setInport1508(self):
+	    	#sync _P_yc5FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1508 = Inport1508 
+   		
+   		def getInport1508(self):
+	    	#sync _P_yc5FXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1508   
+ 
+  	    def setInport1596(self):
+	    	#sync _P_7m11XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport1596 = Inport1596 
+   		
+   		def getInport1596(self):
+	    	#sync _P_7m11XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport1596   
+  	
+  	# Generate setter and getter for all outports in component572 class
+	 
+	def execute(self, int Inport26, int Inport661, int Inport790, int Inport1508, int Inport1596):
+		
+		#sync _P7-7BlXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==PYr5IA==bIU30yp1waxD0p4IuWNdHl6HAdH41ufUIA==8r8iMMB0ASA=3QN+lUK6AdH1T3rzMMB0ASA=3QN+EVbdIA==dUb6coYuASA=3QN+KWmyAdH1sAVKcoYuASA=3QN+IF/3IA==vnyMoSuoASA=3QN+NrCFAdH1+TrboSuoASA=3QN+Ij6iIA==2LdJBOdHASA=3QN++0TLAdH19cLlBOdHASA=3QN+4WfNIA==P1zWZEyiASA=3QN+Na7kAdH1XGhzZEyiASA=3QN+4eW4fAk=b8kcATc=5Cm3ASA=EPJnCQ==oPk1AA==ASA=ASA=AA==
+'''

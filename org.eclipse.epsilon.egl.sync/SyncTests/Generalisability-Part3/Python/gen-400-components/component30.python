@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _B7GaNFXuEeyXQOB43nOgrg, name   =end component30 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport21 = Inport21
+          self.__Inport297 = Inport297
+          self.__Inport470 = Inport470
+          self.__Outport444 = Outport444
+     
+     # Generate setter and getter for all inports in component30 class
+ 
+  	    def setInport21(self):
+	    	#sync _B7PkHVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport21 = Inport21 
+   		
+   		def getInport21(self):
+	    	#sync _B7PkHVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport21   
+ 
+  	    def setInport297(self):
+	    	#sync _B7h3_VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport297 = Inport297 
+   		
+   		def getInport297(self):
+	    	#sync _B7h3_VXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport297   
+ 
+  	    def setInport470(self):
+	    	#sync _B7zkylXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport470 = Inport470 
+   		
+   		def getInport470(self):
+	    	#sync _B7zkylXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport470   
+  	
+  	# Generate setter and getter for all outports in component30 class
+ 
+  	    def setOutport444(self):
+	    	#sync _B7xIhVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport444 = Outport444
+   		
+   		def getOutport444(self):
+	    	#sync _B7xIhVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport444   
+	 
+	def execute(self, int Inport21, int Inport297, int Inport470):
+		
+		#sync _B7GaNFXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==VN4TIA==bIU3rLI6luoPAVAq/dfoAdH4PoLAIA==61lCbT+XASA=3QN+7LOZAdH1SBUTbT+XASA=3QN+EVSXIA==0DWQgIfJASA=3QN+++VuAdH1CvPggIfJASA=3QN+GbmVIA==uRda3byDASA=3QN+3kKyAdH189Wq3byDASA=3QN+HQPpfAk=CaLLIA==Cy0DPCEOASA=3QN++frkAdH1KDifPCEOASA=3QN+QGVFATc=RIcFASA=N8BYCQ==oPk1AA==ASA=ASA=AA==
+'''

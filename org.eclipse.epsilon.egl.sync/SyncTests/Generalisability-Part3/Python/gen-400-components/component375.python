@@ -1,0 +1,74 @@
+#Python
+	
+class =begin sync _B7NH3VXuEeyXQOB43nOgrg, name   =end component375 =begin endSync  =end : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__Inport193 = Inport193
+          self.__Inport611 = Inport611
+          self.__Inport748 = Inport748
+          self.__Outport260 = Outport260
+     
+     # Generate setter and getter for all inports in component375 class
+ 
+  	    def setInport193(self):
+	    	#sync _B7ZVKVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport193 = Inport193 
+   		
+   		def getInport193(self):
+	    	#sync _B7ZVKVXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport193   
+ 
+  	    def setInport611(self):
+	    	#sync _B8F4pFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport611 = Inport611 
+   		
+   		def getInport611(self):
+	    	#sync _B8F4pFXuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport611   
+ 
+  	    def setInport748(self):
+	    	#sync _B8aBt1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Inport748 = Inport748 
+   		
+   		def getInport748(self):
+	    	#sync _B8aBt1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Inport748   
+  	
+  	# Generate setter and getter for all outports in component375 class
+ 
+  	    def setOutport260(self):
+	    	#sync _B7e0q1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        self.__Outport260 = Outport260
+   		
+   		def getOutport260(self):
+	    	#sync _B7e0q1XuEeyXQOB43nOgrg, pythonBehaviour     			 
+		
+			#endSync
+        return self.__Outport260   
+	 
+	def execute(self, int Inport193, int Inport611, int Inport748):
+		
+		#sync _B7NH3VXuEeyXQOB43nOgrg, PythonBehaviour     			 
+	
+		#endSync
+
+		
+		
+
+'''
+yt02CQ==hahqIA==bIU3gwKHWFdS3WFLZvPTAdH4TRGoIA==PGdsRYBmASA=3QN+ktv0AdH1dyW7RYBmASA=3QN+GALrIA==j/DPjF32ASA=3QN+aCCMAdH1yq8fjF32ASA=3QN+IBmCIA==GC/IzhgYASA=3QN+hFWtAdH1Uu4XzhgYASA=3QN+IfvPfAk=5fLwIA==q55LFmk/ASA=3QN+YxbPAdH1yKnnFmk/ASA=3QN+PRXyATc=OniRASA=9XoICQ==oPk1AA==ASA=ASA=AA==
+'''

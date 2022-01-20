@@ -19,6 +19,7 @@ package org.eclipse.epsilon.egl.sync;
  * Two changes:
  * - the package name 
  * - the protected to public -- for the method LinesToCharsResults, linesToChars, charsToLines
+ * Line - 92 -511 and maybe one more 
  */
 
 //Changed the package name from the original
@@ -87,7 +88,7 @@ public class diff_match_patch {
    * Internal class for returning results from diff_linesToChars().
    * Other less paranoid languages just use a three-element array.
    */
-  // I changed this method and its properties from protected to public
+// I changed this method and its properties from protected to public
   public static class LinesToCharsResult {
     public String chars1;
     public String chars2;
@@ -507,7 +508,7 @@ public class diff_match_patch {
    *     the List of unique strings.  The zeroth element of the List of
    *     unique strings is intentionally blank.
    */
-  //I changed this method from protected to public
+  // I changed this method from protected to public
   public LinesToCharsResult diff_linesToChars(String text1, String text2) {
     List<String> lineArray = new ArrayList<String>();
     Map<String, Integer> lineHash = new HashMap<String, Integer>();

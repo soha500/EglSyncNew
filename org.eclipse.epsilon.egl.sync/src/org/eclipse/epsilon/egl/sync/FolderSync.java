@@ -64,73 +64,86 @@ public class FolderSync {
 
 	// To check if any change happened outside the regions..
 	public static boolean areChangesOutsideRegions2(String fileContent) {
-		String hashLine;
-		List<String> lines;
-		// looking for the last two lines and remove them
-		{
-			String[] linesArr = fileContent.split("\n");
-			hashLine = linesArr[linesArr.length - 1].substring(2);
-			lines = new ArrayList<String>(Arrays.asList(linesArr));
-			lines.remove(lines.size() - 1); // remove hashes first
-			lines.remove(lines.size() - 1); // remove comment second
-		}
-
-		String recreatedContent = String.join("\n", lines); // take all lines without the last two lines
-		String contentWithoutAnyRegions = OutputBuffer.contentWithoutRegions(recreatedContent);
-		String[] linesWithoutRegions = contentWithoutAnyRegions.split("\n");
-		String oldHashDoc = makeHashDoc(hashLine);
-		String newHashDoc = makeHashDoc(OutputBuffer.makeHashLine(recreatedContent));
-		List<Diff> diffs = lineDiffs(oldHashDoc, newHashDoc);
-		for (Diff d : diffs)
-			d.text = d.text.replace("\n", ""); // remove new line
-		boolean hasChanged = false;
-		// To track the line number..
-		int l = 0; // Line index for lines without regions
-		int o = 0; // Offset 
-		boolean isChange = false; // keep track if there is change rather deletion or insertion
-		for (int d = 0; d < diffs.size(); ++d) {
-			Diff diff = diffs.get(d);
-			int dLines = diff.text.length() / 3;
-			if (dLines == 0)
-				continue;
-
-			if (diff.operation == Operation.DELETE)
-				if (d + 1 < diffs.size() && diffs.get(d + 1).operation == Operation.INSERT) {
-					int delOffset = calculateRegionLength(lines, dLines, o + l);
-					int insOffset = calculateRegionLength(lines, 1, o + l);
-					isChange = l + o + delOffset == l + o + insOffset;
-					if (isChange) {
-						o += delOffset;
-						continue;
-					}
-				}
-
-			switch (diff.operation) {
-			case DELETE:
-				o += calculateRegionLength(lines, dLines, o + l);
-				if (diff.text == OutputBuffer.makeHashLine("(a protected region)")) break; // Be silent if it was a deletion of our marker
-				System.out.println(dLines + " DELETION" + (dLines > 1 ? "S starting" : "") + " on line " + (l + o + 1) + "."); 
-				hasChanged = true;
-				break;
-			case EQUAL:
-				o += calculateRegionLength(lines, dLines, o + l);
-				l += dLines;
-				break;
-			case INSERT:
-				o += calculateRegionLength(lines, 1, o + l);
-				System.out.print(dLines + (isChange ? " CHANGE" : " INSERTION"));
-				isChange = false;
-				System.out.println((dLines > 1 ? "S starting" : "") + " on line " + (l + o + 1) + ":");
-				for (int i = 0; i < diff.text.length() / 3; ++i) {
-					System.out.println(" " + (l + o + 1) + ": " + linesWithoutRegions[l]);
-					++l;
-					o += calculateRegionLength(lines, 1, o + l);
-				}
-				hasChanged = true;
-				break;
-			}
-		}
-		return hasChanged;
+		return false;
+//		String hashLine;
+//		List<String> lines;
+//		// looking for the last two lines and remove them
+//		{
+//			String[] linesArr = fileContent.split("\n");
+//			//The below line was the old and the new is below it 
+////			hashLine = linesArr[linesArr.length - 1].substring(2);
+//			
+//			// Change it today 27/10/2021
+//			hashLine = linesArr[linesArr.length - 2];
+//			lines = new ArrayList<String>(Arrays.asList(linesArr));
+//			// This is the old one 
+////			lines.remove(lines.size() - 1); // remove hashes first
+////			lines.remove(lines.size() - 1); // remove comment second
+////			
+//
+//			// Here the new one: I tried to remove the last three lines for the hashes, but still does not work.
+//			lines.remove(lines.size() - 1); // remove end las comment at the bottom of the file
+//			lines.remove(lines.size() - 1); // remove hashes between comments
+//			lines.remove(lines.size() - 1); // remove end first comment at the bottom of the file
+//		}
+//
+//		String recreatedContent = String.join("\n", lines); // take all lines without the last two lines
+//		String contentWithoutAnyRegions = OutputBuffer.contentWithoutRegions(recreatedContent);
+//		String[] linesWithoutRegions = contentWithoutAnyRegions.split("\n");
+//		String oldHashDoc = makeHashDoc(hashLine);
+//		String newHashDoc = makeHashDoc(OutputBuffer.makeHashLine(recreatedContent));
+//		List<Diff> diffs = lineDiffs(oldHashDoc, newHashDoc);
+//		for (Diff d : diffs)
+//			d.text = d.text.replace("\n", ""); // remove new line
+//		boolean hasChanged = false;
+//		// To track the line number..
+//		int l = 0; // Line index for lines without regions
+//		int o = 0; // Offset 
+//		boolean isChange = false; // keep track if there is change rather deletion or insertion
+//		for (int d = 0; d < diffs.size(); ++d) {
+//			Diff diff = diffs.get(d);
+//			int dLines = diff.text.length() / 3;
+//			if (dLines == 0)
+//				continue;
+//
+//			if (diff.operation == Operation.DELETE)
+//				if (d + 1 < diffs.size() && diffs.get(d + 1).operation == Operation.INSERT) {
+//					int delOffset = calculateRegionLength(lines, dLines, o + l);
+//					int insOffset = calculateRegionLength(lines, 1, o + l);
+//					isChange = l + o + delOffset == l + o + insOffset;
+//					if (isChange) {
+//						o += delOffset;
+//						continue;
+//					}
+//				}
+//
+//			switch (diff.operation) {
+//			case DELETE:
+//				o += calculateRegionLength(lines, dLines, o + l);
+//				if (diff.text == OutputBuffer.makeHashLine("(a protected region)")) break; // Be silent if it was a deletion of our marker 
+//				System.out.println(dLines + " DELETION" + (dLines > 1 ? "S starting" : "") + " on line " + (l + o + 1) + "."); 
+//				hasChanged = true;
+//				break;
+//			case EQUAL:
+//				o += calculateRegionLength(lines, dLines, o + l);
+//				l += dLines;
+//				break;
+//				// the problem is here: it count a new insertion why!!!!
+//			case INSERT:
+//				o += calculateRegionLength(lines, 1, o + l);
+//				System.out.print(dLines + (isChange ? " CHANGE" : " INSERTION"));
+//				isChange = false;
+//				System.out.println((dLines > 1 ? "S starting" : "") + " on line " + (l + o + 1) + ":");
+//				for (int i = 0; i < diff.text.length() / 3; ++i) {
+//					System.out.println(" " + (l + o + 1) + ": " + linesWithoutRegions[l]);
+//					++l;
+//					o += calculateRegionLength(lines, 1, o + l);
+//				}
+//				hasChanged = true;
+//				break;
+//			}
+//		}
+//		return hasChanged;
 	}
 
 	// Take it from https://github.com/google/diff-match-patch/wiki/Line-or-Word-Diffs
@@ -310,7 +323,6 @@ public class FolderSync {
 		IPropertyGetter propertyGetter = model.getPropertyGetter();
 
 		for (Synchronization sync : allTheSyncsRegionsOfTheFolder) {
-
 			String valueOfAttributeInTheModel;
 			// a.The respective element is found
 			if ((model.getElementById(sync.id) != null)) {

@@ -8,7 +8,10 @@ class Model extends Component {
 
 class Component {
 	attr String name;
-	attr String behaviour;
+	attr String JavaBehaviour;
+	attr String PythonBehaviour;
+	attr String RubyBehaviour;
+	attr String HtmlBehaviour;
 	val Port[*] inPorts;
 	val Port outPort;
 }

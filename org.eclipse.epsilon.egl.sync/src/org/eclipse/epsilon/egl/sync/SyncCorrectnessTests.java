@@ -48,12 +48,14 @@ import org.xml.sax.SAXException;
 import org.eclipse.epsilon.emc.emf.EmfUtil;
 import org.eclipse.epsilon.emc.emf.EmfModelFactory;
 
-public class SyncTest {
+public class SyncCorrectnessTests {
 	/*
 	 * This is work and the one below also works but in case i avoid breaking test i
 	 * will use this until I need to change it.
 	 */
-	private static final String FOLDER_PATH = System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/";
+	//private static final String FOLDER_PATH = System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/";
+	private static final String FOLDER_PATH = System.getProperty("user.dir") + "/SyncTests/Correctness-Part1/";
+
 	
 	EmfModel model;
 	FolderSync syncReader;
@@ -70,7 +72,7 @@ public class SyncTest {
 		 * For temporary copy of the model
 		 */
 		
-		File orginalFile = new File(System.getProperty("user.dir") + "/SyncTests/Model-University/University.model");
+		File orginalFile = new File(System.getProperty("user.dir") + "/SyncTests/Correctness-Part1/Model-University/University.model");
 		File tempFile = tempFolder.newFile("tempUni.model");
 		try {
 			Files.copy(orginalFile.toPath(), tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
@@ -78,9 +80,12 @@ public class SyncTest {
 			e.printStackTrace();
 		}
 
+		/*
+		 * this one to declare the model, its Metamodel, and their templates.
+		 */
 		tempModel = new EmfModel();
 		tempModel.setName("M");
-		tempModel.setMetamodelFile(new File(System.getProperty("user.dir") + "/SyncTests/Model-University/University.ecore").getAbsolutePath());
+		tempModel.setMetamodelFile(new File(System.getProperty("user.dir") + "/SyncTests/Correctness-Part1/Model-University/University.ecore").getAbsolutePath());
 		tempModel.setModelFile(tempFile.getAbsolutePath());
 		tempModel.setReadOnLoad(true);
 
@@ -103,7 +108,9 @@ public class SyncTest {
 		 */
 		try {
 			EglFileGeneratingTemplateFactory templateFactory = new EglFileGeneratingTemplateFactory();
-			templateFactory.setOutputRoot(System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/");
+			//templateFactory.setOutputRoot(System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/");
+			templateFactory.setOutputRoot(System.getProperty("user.dir") + "/SyncTests/Correctness-Part1/");
+
 
 			return new EgxModule(templateFactory);
 		} catch (Exception ex) {
@@ -123,7 +130,7 @@ public class SyncTest {
 		// create so you need to include that code as well.
 		try {
 			// this works and automatically generates the files without need to all URL 20/02/20
-			module.parse(new File("SyncTests/Model-University/main.egx"));
+			module.parse(new File("SyncTests/Correctness-Part1/Model-University/main.egx"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -136,8 +143,7 @@ public class SyncTest {
 	}
 
 	/*
-	 * Scenario 1, There is one sync regions which contains the same value 
-	 * in the model.
+	 * Scenario 1, There is one sync regions which contains the same value in the model.
 	 */
 	
 	@Test
@@ -158,7 +164,7 @@ public class SyncTest {
 				newLines.add(line);
 			else {
 				newLines.add(line);
-				newLines.add("hell");
+				newLines.add("hello");
 
 				while (!line.contains("//endSync"))
 					line = original.readLine();
@@ -402,7 +408,7 @@ public class SyncTest {
 	 * from the one in the model and it breaks the following tests 
 	 */
 
-//	@Test
+	@Test
 	public void test6() throws IOException {
 		System.out.println("\n Test 6 : Two sync regions but have also two different values from the one in the model.\n");
 
@@ -450,12 +456,11 @@ public class SyncTest {
 			e.printStackTrace();
 		}
 		
-		assertEquals("test 6", "hello", valueOfAttributeInTheModel);
+		assertEquals("test 6", "welcome", valueOfAttributeInTheModel);
 	}
 
 	/*
-	 * Scenario 7, There are three sync regions but contains the same value in the
-	 * model.
+	 * Scenario 7, There are three sync regions but contains the same value in the model.
 	 */
 
 	@Test

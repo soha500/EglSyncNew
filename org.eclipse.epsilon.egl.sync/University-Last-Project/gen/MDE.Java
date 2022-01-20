@@ -1,27 +1,12 @@
- 
-public class /*sync _OeCHMPxQEemsbtndia47ww, name  */ MDE /*endSync */ {
+public class /*sync _OeCHMPxQEemsbtndia47ww, name  */ MDE7 /*endSync */  
+extends /*sync _NzfVYPxQEemsbtndia47ww, grade  */ 617 /*endSync */ {
+ {
 	
-	protected String name;
-	
-	public String getName(){ 
-		return name; 
-	}
-
-	public String setName(String name) {
-	this.name = name;
-	}
-	
-	// protected region extra-method on begin //
-			
+//sync _OeCHMPxQEemsbtndia47ww, description  
+	hello7
 				
-	// protected region extra-method end //
-	
-	
-	//sync _OeCHMPxQEemsbtndia47ww, description  
-	
-	
-	//endSync
-	
+ //endSync	
 }
-// The below line cannot be changed:
-//AA=U3yAA=QiTAA=8Dg2e6fQ=AA=VeKbIBfQ=AA=0JnAA=AA=0JnAA=fQ=
+/*
+U3yTsqKlfQ==
+*/

@@ -1,6 +1,0 @@
-[*
-
-<h1> [%=out.startSync("<!--", "-->", c.id, "name")%] [%=c.name%] [%=out.endSync()%] </h1> works fine
-
-
-*]

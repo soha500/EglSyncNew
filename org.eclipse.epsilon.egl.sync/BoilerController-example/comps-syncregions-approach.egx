@@ -1,0 +1,14 @@
+rule Model2Class 
+	transform m : Model {
+	template : "Model2Class.egl"
+	parameters : Map{"package"="syncregionsExample"}
+	target : "gen/" + m.name + ".java"
+	
+}
+
+rule Component2Class 
+	transform c : Component {
+	template : "Component2Class.egl"
+	parameters : Map{"package"="syncregionsExample"}
+	target : "gen/" + c.name + ".java"	
+}

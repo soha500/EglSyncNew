@@ -1,6 +1,6 @@
 #Python
 	
-class [%=out.startSync("=begin ", " =end", c.id, "name")%] [%=c.name%] [%=out.endSync()%] : 
+class [%=c.name%] : 
  
      def __init__(self): # in python you need to add self word to any method in this class
      [%for (inport in c.inPorts){%]
@@ -13,41 +13,27 @@ class [%=out.startSync("=begin ", " =end", c.id, "name")%] [%=c.name%] [%=out.en
      # Generate setter and getter for all inports in [%=c.name%] class
   	[%for (inport in c.inPorts){%] 
   	    def set[%=inport.name%](self):
-	    	[%=out.startSync("#", inport.id, "pythonBehaviour")%]    			 
-		
-			[%=out.endSync()%]
+  	    
         self.__[%=inport.name%] = [%=inport.name%] 
    		
    		def get[%=inport.name%](self):
-	    	[%=out.startSync("#", inport.id, "pythonBehaviour")%]    			 
-		
-			[%=out.endSync()%]
+   		
         return self.__[%=inport.name%]   
   	[%}%]
   	
   	# Generate setter and getter for all outports in [%=c.name%] class
   	[%for (outport in c.outPort){%] 
   	    def set[%=outport.name%](self):
-	    	[%=out.startSync("#", outport.id, "pythonBehaviour")%]    			 
-		
-			[%=out.endSync()%]
+  	    
         self.__[%=outport.name%] = [%=outport.name%]
    		
    		def get[%=outport.name%](self):
-	    	[%=out.startSync("#", outport.id, "pythonBehaviour")%]    			 
-		
-			[%=out.endSync()%]
+   		
         return self.__[%=outport.name%]   
   	[%}%]
 	 
 	def execute(self, [%=c.inPorts.collect(p|p.type + " " + p.name).concat(", ")%]):
 		
-		[%=out.startSync("#" , c.id, "PythonBehaviour")%]    			 
+		[%=out.startSync("#" , c.id, "pythonBehaviour")%]    			 
 	
 		[%=out.endSync()%]
-
-		
-		
-[*
-
- *]

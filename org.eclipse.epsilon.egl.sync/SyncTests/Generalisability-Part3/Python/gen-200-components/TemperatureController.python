@@ -1,0 +1,42 @@
+#Python
+	
+class TemperatureController : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__temperature = temperature
+          self.__targetTemperature = targetTemperature
+          self.__temperatureDifference = temperatureDifference
+     
+     # Generate setter and getter for all inports in TemperatureController class
+ 
+  	    def settemperature(self):
+  	    
+        self.__temperature = temperature 
+   		
+   		def gettemperature(self):
+   		
+        return self.__temperature   
+ 
+  	    def settargetTemperature(self):
+  	    
+        self.__targetTemperature = targetTemperature 
+   		
+   		def gettargetTemperature(self):
+   		
+        return self.__targetTemperature   
+  	
+  	# Generate setter and getter for all outports in TemperatureController class
+ 
+  	    def settemperatureDifference(self):
+  	    
+        self.__temperatureDifference = temperatureDifference
+   		
+   		def gettemperatureDifference(self):
+   		
+        return self.__temperatureDifference   
+	 
+	def execute(self, int temperature, int targetTemperature):
+		
+		#sync _bfpnFUbFEeqXnfGWlV2_8A, pythonBehaviour     			 
+hi23
+		#endSync

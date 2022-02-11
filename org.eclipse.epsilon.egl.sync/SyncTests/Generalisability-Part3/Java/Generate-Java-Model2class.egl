@@ -1,0 +1,38 @@
+package [%=package%];
+
+public class [%=m.name%] {
+			   [*to get outPort type*]	    [*to get type and name of all inPorts in the model*]
+	
+	public [%=m.outPort.type%] execute([%=m.inPorts.collect(p|p.type + " " + p.name).concat(", ")%]) {
+		[* iterates through components in the model*]
+		[%for (child in m.components){%]
+		[* get component's name*] [* to make the first letter of component's name samll*] [* = new  component's name plus ()*]		
+		[%=child.name%] [%=child.name.ftlc()%] = new [%=child.name%]();
+		[* get component's type*] [* to make the first letter of component's name samll puls Result*] [* get component's name*] [* to make the first letter of component's name samll puls execute(getInputParameters)*]		
+		[*[%=child.outPort.type%] [%=child.name.ftlc()%]Result = [%=child.name.ftlc()%].execute([%=child.getInputParameters().concat(", ")%]);*]
+		[%=child.outPort.type%] [%=child.name.ftlc()%]Result = [%=child.name.ftlc()%].execute();
+		[%}%]
+		
+	[*	return [%=m.outPort.incoming.source.eContainer().name.ftlc() + "Result"%]; *]
+		return [%=m.outPort.incoming.source.name + "Result"%];
+		
+	}
+	
+}
+
+[*
+[%
+operation Component getInputParameters(){
+	var parameters : Sequence;
+	for (p in self.inPorts) {
+		if (p.incoming.source.eContainer().isTypeOf(Model)) {
+			parameters.add(p.incoming.source.name);
+		}
+		else {
+			parameters.add(p.incoming.source.eContainer().name.ftlc() + "Result");
+		}
+	}
+	return parameters;
+}
+%]
+*]

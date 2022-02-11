@@ -1,0 +1,42 @@
+#Python
+	
+class BoilerActuator : 
+ 
+     def __init__(self): # in python you need to add self word to any method in this class
+          self.__temperatureDifference = temperatureDifference
+          self.__boilerStatus = boilerStatus
+          self.__action = action
+     
+     # Generate setter and getter for all inports in BoilerActuator class
+ 
+  	    def settemperatureDifference(self):
+  	    
+        self.__temperatureDifference = temperatureDifference 
+   		
+   		def gettemperatureDifference(self):
+   		
+        return self.__temperatureDifference   
+ 
+  	    def setboilerStatus(self):
+  	    
+        self.__boilerStatus = boilerStatus 
+   		
+   		def getboilerStatus(self):
+   		
+        return self.__boilerStatus   
+  	
+  	# Generate setter and getter for all outports in BoilerActuator class
+ 
+  	    def setaction(self):
+  	    
+        self.__action = action
+   		
+   		def getaction(self):
+   		
+        return self.__action   
+	 
+	def execute(self, int temperatureDifference, boolean boilerStatus):
+		
+		#sync _bfpnGUbFEeqXnfGWlV2_8A, pythonBehaviour     			 
+hi23
+		#endSync

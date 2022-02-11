@@ -1,0 +1,12 @@
+rule ModelTo200Html 
+	transform m : Model {
+	template : "ThreeSyncs-Model2class.egl"
+	parameters : Map{"package"="syncregions"}
+	target : "gen-400-components/" + m.name + '.html'
+}
+
+rule ComponentTo200Html
+	transform c : Component {
+	template : "ThreeSyncs-ComponentToClass.egl"
+	target : "gen-400-components/" + c.name + '.html'	
+}

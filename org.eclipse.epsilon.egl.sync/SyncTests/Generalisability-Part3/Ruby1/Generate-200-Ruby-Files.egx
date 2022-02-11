@@ -1,0 +1,7 @@
+
+rule ComponentTo200Ruby
+	transform c : Component {
+	template : "Generate-Ruby-ComponentToClass.egl"
+	target : "gen-200-components/" + c.name + '.ruby'	
+}
+

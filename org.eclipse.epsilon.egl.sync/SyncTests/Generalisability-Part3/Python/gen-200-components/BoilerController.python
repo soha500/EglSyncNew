@@ -1,0 +1,34 @@
+#Python
+	
+class BoilerController : 
+ 
+# for components in the model
+    def __init__(): # constractor 
+ 
+         self.TemperatureController = TemperatureController;
+ 
+         self.BoilerActuator = BoilerActuator;
+ 
+# for ports in the model   	
+   	def __init__(): # constractor
+ 
+         self.temperature = temperature;
+ 
+         self.targetTemperature = targetTemperature;
+ 
+         self.boilerStatus = boilerStatus;
+ 
+         self.action = action;
+ 
+         self.temperature = temperature;
+ 
+         self.targetTemperature = targetTemperature;
+ 
+         self.temperatureDifference = temperatureDifference;
+ 
+         self.temperatureDifference = temperatureDifference;
+ 
+         self.boilerStatus = boilerStatus;
+ 
+         self.action = action;
+ 

@@ -1,0 +1,12 @@
+package syncregions;
+
+public class [%=c.name%] {
+	       [*to get outPort type*]	    [*to get type and name of all inPorts in the model*]
+	public [%=c.outPort.type%] execute([%=c.inPorts.collect(p|p.type + " " + p.name).concat(", ")%]) {
+		
+		[%=out.startSync("//", c.id, "behaviour")%]    			 
+
+		[%=out.endSync()%]
+		
+	}
+}

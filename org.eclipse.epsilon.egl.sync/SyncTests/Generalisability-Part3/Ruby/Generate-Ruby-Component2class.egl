@@ -1,6 +1,6 @@
-#Ruby 
- 
-class [%=out.startSync("=begin ", "=end", c.id, "name")%] [%=c.name%] [%=out.endSync()%]
+#Ruby
+
+class [%=c.name%] 
   def initialize(name)
     @name = name
   end
@@ -8,15 +8,9 @@ class [%=out.startSync("=begin ", "=end", c.id, "name")%] [%=c.name%] [%=out.end
 	  # Generate setter and getter for all inports in [%=c.name%] class  	
 	  [%for (inport in c.inPorts){%] 
 	  def [%=inport.name%] 
-	  	    [%=out.startSync("#", c.id, "RubyBehaviour")%]    			 
-			
-			[%=out.endSync()%]
 	    @[%=inport.name%]
 	  end
 	  def [%=inport.name%]=([%=inport.name%])
-	    	[%=out.startSync("#", c.id, "RubyBehaviour")%]    			 
-			
-		    [%=out.endSync()%]
 	    @[%=inport.name%] = [%=inport.name%]
 	  end
 	  [%}%]
@@ -24,20 +18,14 @@ class [%=out.startSync("=begin ", "=end", c.id, "name")%] [%=c.name%] [%=out.end
 	  # Generate setter and getter for all outports in [%=c.name%] class
 	  [%for (outport in c.outPort){%] 
 	  def [%=outport.name%] 
-	  	    [%=out.startSync("#", c.id, "RubyBehaviour")%]    			 
-			
-			[%=out.endSync()%]
 	    @[%=outport.name%]
 	  end
-	  def [%=outport.name%]=([%=outport.name%])
-	    	[%=out.startSync("#", c.id, "RubyBehaviour")%]    			 
-			
-			[%=out.endSync()%]
+	  def [%=outport.name%]=([%=outport.name%])]
 	    @[%=outport.name%] = [%=outport.name%]
 	  end
 	  [%}%]
     def execute([%=c.inPorts.collect(p|p.type + " " + p.name).concat(", ")%])
-		[%=out.startSync("#", c.id, "RubyBehaviour")%]    			 
+		[%=out.startSync("#", c.id, "rubyBehaviour")%]    			 
 
 		[%=out.endSync()%]
     end

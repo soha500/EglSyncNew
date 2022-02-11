@@ -1,0 +1,93 @@
+rule Model2Class 
+	transform m : Model {
+	template : "Generate-Java-Model2class.egl"
+	parameters : Map{"package"="syncregions"}
+	target : "gen-200-Components/" + m.name + ".java"
+	
+}
+
+rule Component2Class 
+	transform c : Component {
+	template : "Generate-Java-Component2class.egl"
+	target : "gen-200-Components/" + c.name + ".java"	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//rule Component2Class 
+//	transform c : Component {
+
+//	template : "sync-regions-component2class.egl"
+
+//	target : "10Files-src-gen-sync-regions/syncregions/" + c.name + ".java"
+	
+//}
+
+// here for teasting the scalablity only 
+
+//rule Component2Class 
+//	transform c : Component {
+
+//	template : "sync-regions-component2class-10Files.egl"
+
+//	target : "10Files-src-gen-sync-regions/syncregions/" + c.name + ".java"
+	
+//}
+
+//rule Component2Class 
+//	transform c : Component {
+
+//	template : "sync-regions-component2class-100Files.egl"
+
+//	target : "100Files-src-gen-sync-regions/syncregions/" + c.name + ".java"
+	
+//}
+
+//rule Component2Class 
+//	transform c : Component {
+
+//	template : "sync-regions-component2class-1000Files.egl"
+
+//	target : "1000Files-src-gen-sync-regions/syncregions/" + c.name + ".java"
+	
+//}
+
+

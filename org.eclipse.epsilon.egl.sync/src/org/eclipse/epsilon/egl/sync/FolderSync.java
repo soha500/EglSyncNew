@@ -330,8 +330,7 @@ public class FolderSync {
 //				System.out.println("The respective element is found");
 				// b. The value of the region is checked against the type of the respective property
 				try {
-					valueOfAttributeInTheModel = propertyGetter
-							.invoke(model.getElementById(sync.id), sync.getAttribute()).toString();
+					valueOfAttributeInTheModel = propertyGetter.invoke(model.getElementById(sync.id), sync.getAttribute()).toString();
 				} catch (EolRuntimeException e1) {
 					System.err.println("Sorry! There's no respictive attribute in the model: " + sync.getAttribute());
 					return "The respective attribute is not found";

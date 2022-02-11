@@ -19,53 +19,16 @@ import org.eclipse.epsilon.eol.models.IModel;
 import org.junit.Test;
 
 public class SyncAppFromModel {
+
+	// for boiler example
+	private static final String FOLDER_PATH = System.getProperty("user.dir") + "/BoilerController-example/gen";
 	
-	// for the university-last project - just to test
-	private static final String FOLDER_PATH = System.getProperty("user.dir") + "/University-Last-Project/gen";
-
-	/*
-	 * This path works fine, but I need to check why it only works with adding Test1 at the end. 
-	 */
-
-//	private static final String FOLDER_PATH = System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/Test1";
-
-	
-	/*
-	 *  This path for the boiler test in this workspace and it works. if I use 
-	 *  System.getProperty("user.dir") to make it general (relevant path), it 
-	 *  refers to sync engine I do not know why?
-	 */
-	// Last time I commented this path for the boiler to run the University example.
-//	private static final String FOLDER_PATH = "/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/src-gen-sync-regions/syncregions/";	
-
-	//	private static final String FOLDER_PATH = "../git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/src-gen-sync-regions/syncregions/";
-
 	public static void main(String[] args) throws EolModelLoadingException, IOException {
 
 		EmfModel model = new EmfModel();
 		model.setName("M");
-		
-		// for the university-last project - just to test
-		model.setMetamodelFile(new File("University-Last-Project/University.ecore").getAbsolutePath());
-		model.setModelFile(new File("University-Last-Project/University.model").getAbsolutePath());	
-		
-//		// for the university
-//		model.setMetamodelFile(new File("SyncTests/Model-University/University.ecore").getAbsolutePath());
-//		model.setModelFile(new File("SyncTests/Model-University/University.model").getAbsolutePath());	
-//		
-		
-		// Last time I commented this path for the boiler to run the University example.
-		// for the boiler test in other workspace
-//		model.setMetamodelFile(new File("/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/comps.ecore").getAbsolutePath());
-//		model.setModelFile(new File("/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/BoilerController.model").getAbsolutePath());
-		
-		
-		
-		// Tried with relevant path the boiler test in other workspace, not works
-//		model.setMetamodelFile(new File("/comps.ecore").getAbsolutePath());
-//		model.setModelFile(new File("/BoilerController.model").getAbsolutePath());
-	
-	
+		model.setMetamodelFile(new File("BoilerController-example/comps.ecore").getAbsolutePath());
+		model.setModelFile(new File("BoilerController-example/BoilerController.model").getAbsolutePath());	
 		model.setReadOnLoad(true);
 		model.setStoredOnDisposal(true);
 
@@ -80,5 +43,126 @@ public class SyncAppFromModel {
 
 	}
 }
+/*
+	BoilerActuator
+	if (temperatureDifference > 0 && boilerStatus == true) {
+		return 1;
+	} else if (temperatureDifference < 0 && boilerStatus == false) {
+		return 2;
+	} else
+		return 0;
+*/
+
+
+/*
+	TemperatureController
+	return temperature - targetTemperature;
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //System.out.println("Working Directory = " + System.getProperty("user.dir"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for the university-last project - just to test
+//private static final String FOLDER_PATH = System.getProperty("user.dir") + "/University-Last-Project/gen";
+
+/*
+ * This path works fine, but I need to check why it only works with adding Test1 at the end. 
+ */
+
+//private static final String FOLDER_PATH = System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/Test1";
+
+
+/*
+ *  This path for the boiler test in this workspace and it works. if I use 
+ *  System.getProperty("user.dir") to make it general (relevant path), it 
+ *  refers to sync engine I do not know why?
+ */
+// Last time I commented this path for the boiler to run the University example.
+//	private static final String FOLDER_PATH = "/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/src-gen-sync-regions/syncregions/";	
+
+//	private static final String FOLDER_PATH = "../git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/src-gen-sync-regions/syncregions/";
+
+//until here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for the university-last project - just to test
+//model.setMetamodelFile(new File("University-Last-Project/University.ecore").getAbsolutePath());
+//model.setModelFile(new File("University-Last-Project/University.model").getAbsolutePath());	
+
+
+//// for the university
+//model.setMetamodelFile(new File("SyncTests/Model-University/University.ecore").getAbsolutePath());
+//model.setModelFile(new File("SyncTests/Model-University/University.model").getAbsolutePath());	
+//
+
+// Last time I commented this path for the boiler to run the University example.
+// for the boiler test in other workspace
+//model.setMetamodelFile(new File("/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/comps.ecore").getAbsolutePath());
+//model.setModelFile(new File("/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/BoilerController.model").getAbsolutePath());
+
+
+
+// Tried with relevant path the boiler test in other workspace, not works
+//model.setMetamodelFile(new File("/comps.ecore").getAbsolutePath());
+//model.setModelFile(new File("/BoilerController.model").getAbsolutePath());
+

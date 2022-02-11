@@ -26,6 +26,7 @@ import javax.swing.JOptionPane;
 
 import org.eclipse.epsilon.egl.EglFileGeneratingTemplateFactory;
 import org.eclipse.epsilon.egl.EgxModule;
+import org.eclipse.epsilon.egl.sync.SyncGenerelisabiltyTests.Language;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 import org.eclipse.epsilon.eol.IEolModule;
 import org.eclipse.epsilon.eol.exceptions.EolRuntimeException;
@@ -38,24 +39,30 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 
 public class SyncGenerelisabiltyTests {
-
-/*
- * private static final String FOLDER_PATH1 = System.getProperty("user.dir") +  "/SyncTests/Generalisability-Part3/HTML/gen-200-Components"
- * /Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/HTML/gen-200-Components
- * private static final String FOLDER_PATH1 = System.getProperty("user.dir") +  "/SyncTests/Generalisability-Part3/Python/gen-200-components"
- * /Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Python/gen-200-components
- * private static final String FOLDER_PATH1 = System.getProperty("user.dir") +  "/SyncTests/Generalisability-Part3/Ruby/gen-200-Components"
- * /Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Ruby/gen-200-Components
- * 
- * //	private static final String FOLDER_PATH1 = System.getProperty("user.dir") + "/boiler-To-Generate-10-Files/boiler-To-Generate-10-Files/";
-//	private static final String FOLDER_PATH2 = System.getProperty("user.dir") + "/boiler-To-Generate-100-Files/boiler-To-Generate-100-Files/";
-//	private static final String FOLDER_PATH3 = System.getProperty("user.dir") + "/boiler-To-Generate-1000-Files/boiler-To-Generate-1000-Files/";
-
-//  private static final String FOLDER_PATH = System.getProperty("user.dir") + "/boiler-To-Generate-1000-Files/boiler-To-Generate-1000-Files/";
-
- */
-
-	EmfModel model;
+	// Todat change... when I have one line added, when I have multline added
+	enum TestStrategy {
+		OneLineAdded,
+		MultipleLinesAdded,
+	}
+	
+	enum TestStatus {
+		// When 
+		MergeSuccessful,               
+		ModelElementNotExists,
+		ValueNotCompatable, 
+		OneDifferntValue,	
+		TwoDifferntValues,
+	}
+	
+	enum Language {
+		Java,
+		Html,
+		Python,
+		Ruby,
+	}
+	
+	// I need this as I am updating the model.
+//	EmfModel model;
 	FolderSync syncReader;
 	EmfModel tempModel;
 	static List<String> orginalNewLines;
@@ -67,61 +74,34 @@ public class SyncGenerelisabiltyTests {
 		return m.group(1);
 	}
 
-	public static void addAndUpdateModel(String folderPath, EmfModel model, Map<String, String> behaviours) throws IOException {
+	public static void addAndUpdateModel(String folderPath, EmfModel model, List<String> behaviours, Language language) throws IOException {
 		Map<String, String> idToBehaviour = new HashMap<>();
 		File[] files = new File(folderPath).listFiles();
 		// check if file is exists
 		for (File f : files) {
 			if (!f.isFile())
 				continue;
-			for (String className : behaviours.keySet()) {
-				if (!f.getName().contains(className))
-					continue;
-				String behaviour = behaviours.get(className);
-
+			for (String behaviour : behaviours) {
 				BufferedReader original = new BufferedReader(new FileReader(f));
 
 				List<String> newLines = new ArrayList<String>();
 				String line;
 				while ((line = original.readLine()) != null) {
-					newLines.add(line);
-					
-					// Tody changed.. for html 
-					String id = regexMatch(line, "<!--sync (.+?), name  -->");
+					newLines.add(line); 		
+					String id = regexMatch(line, "sync (.+?), ");
 					if (id != null) {
 						idToBehaviour.put(id, behaviour);
 						newLines.add(behaviour);
-						while (!line.contains("<!--endSync -->"))
+						while (!line.contains("endSync"))
 							line = original.readLine();
 						newLines.add(line);
 					}
-					
-//					// Tody changed.. for Python #sync
-//					String id = regexMatch(line, "#sync (.+?), pythonBehaviour");
-//					if (id != null) {
-//						idToBehaviour.put(id, behaviour);
-//						newLines.add(behaviour);
-//						while (!line.contains("#endSync"))
-//							line = original.readLine();
-//						newLines.add(line);
-//					}
-//					
-//					// Tody changed.. for Ruby
-//					String id = regexMatch(line, "#sync (.+?), RubyBehaviour");
-//					if (id != null) {
-//						idToBehaviour.put(id, behaviour);
-//						newLines.add(behaviour);
-//						while (!line.contains("#endSync"))
-//							line = original.readLine();
-//						newLines.add(line);
-//					}
 				}
 				original.close();
 				Files.write(f.toPath(), newLines);
 				break;
 			}
 		}
-		
 		// Update the model with values taken from the generated file..
 		FolderSync folderSync = new FolderSync();
 		folderSync.getSynchronization(folderPath, model);
@@ -131,16 +111,30 @@ public class SyncGenerelisabiltyTests {
 		for (String id : idToBehaviour.keySet()) {
 			Object modelElement = model.getElementById(id);
 			try {
-				assertEquals("test 1", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "name"));
-				
-				// Today change 19/01/2022... For Python and Rub attribute.
-//				assertEquals("test 1", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "pythonBehaviour"));
-//				assertEquals("test 1", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "RubyBehaviour"));
+// Maybe I need to have multiple asserts in a single unit test..!! or seprate them in different methods as what i did at the bottom.
+					
+				switch (language) {
+				case Java:
+					assertEquals("test 1 java", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "behaviour"));	
+					break;
+				case Html:
+					assertEquals("test 2 html", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "htmlBehaviour"));
+					break;
+				case Ruby:
+					assertEquals("test 4 ruby", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "rubyBehaviour"));
+					break;
+				case Python:
+					assertEquals("test 3 python", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "pythonBehaviour"));
+					break;
+//				default:
+//				break;
+				}
 			} catch (EolRuntimeException e) {
 				e.printStackTrace();
 			}
 		}
 	}
+	
 // how to compute the time..
 	@Rule
     public TestName name = new TestName();
@@ -157,75 +151,47 @@ public class SyncGenerelisabiltyTests {
         System.out.println("Test " + name.getMethodName() + " took " + (System.currentTimeMillis() - start) + " ms");
     }
 
-	// with one different value
-	String filePathFor200Files = "DataFor200FilesWith1DifferentValue.csv";
-	String filePathFor400Files = "DataFor400FilesWith1DifferentValue.csv";
-	String filePathFor600Files = "DataFor600FilesWith1DifferentValue.csv";
-	String filePathFor800Files = "DataFor800FilesWith1DifferentValue.csv";
-	String filePathFor1000Files = "DataFor1000FilesWith1DifferentValue.csv";
-
-	// with half different value
-//	String filePathFor200Files = "DataFor200FilesWithHalfDifferentValue.csv";
-//	String filePathFor400Files = "DataFor400FilesWithHalfDifferentValue.csv";
-//	String filePathFor600Files = "DataFor600FilesWithHalfDifferentValue.csv";
-//	String filePathFor800Files = "DataFor800FilesWithHalfDifferentValue.csv";
-//	String filePathFor1000Files = "DataFor1000FilesWithHalfDifferentValue.csv";
-	
-	
-	// Today change 19/01/2022... if I need separate path for each language, I added tests for each language below
-//	String filePathFor200HtmlFiles = "DataFor200HtmlFilesWith1DifferentValue.csv";
-//	String filePathFor200PythonFiles = "DataFor200PythonFilesWith1DifferentValue.csv";
-//	String filePathFor200RubyFiles = "DataFor200RubyFilesWith1DifferentValue.csv";
-
-
-	public static void writeResultsToCSvFile(int stageNumber, long takenTime, long bytesUsed, String filePath) {
+	static // with one different value
+	String resultsFilePath = "DataForSyncGenerlasabiltyTests.csv";
+	public static void writeResultsToCSvFile(int stageNumber, long takenTime, long bytesUsed, int numberOfFile, Language language) {
 		try {
-			boolean header = !new File(filePath).exists();
-			FileWriter fw = new FileWriter(filePath, true);
+			boolean header = !new File(resultsFilePath).exists();
+			FileWriter fw = new FileWriter(resultsFilePath, true);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter pw = new PrintWriter(bw);
 			if (header)
-//				pw.println("Stage number, (Totel) Taken time for each run," + Clock.systemDefaultZone().instant());
-				pw.println("Stage number, (Totel) Taken time, Bytes used, Outlier, Q1 , Q3, IQR, Upper Value, Lower Value");
-			pw.println(String.format("%d,%d,%d", stageNumber, takenTime, bytesUsed));
+				pw.println("Language, Stage number, (Totel) Taken time, Bytes used, Outlier, Q1 , Q3, IQR, Upper Value, Lower Value");
+			pw.println(String.format("%s,%d,%d,%d", language, stageNumber, takenTime, bytesUsed));
 			pw.flush();
 			fw.close();
-
 		} catch (Exception E) {
 			System.out.println("There is errors!!");
 		}
 	}
 
-	public static void doTestNTimes(int numberOfTimes, String filePath, Supplier<Boolean> theTest) throws IOException {
-		new File(filePath).delete();
+	Runtime runtime = Runtime.getRuntime();
+
+	public void doTestNTimes(int numberOfTimes, int numberOfFile) throws IOException {
 		for (int i = 0; i < numberOfTimes; i++) {
-			long start = System.currentTimeMillis();
-			Runtime runtime = Runtime.getRuntime();
-			runtime.gc();
-			theTest.get();
-            long memory = runtime.totalMemory() - runtime.freeMemory();
-			writeResultsToCSvFile(i, System.currentTimeMillis() - start, memory,  filePath);
+			for (int j = 0; j < 4; j++) {
+				runtime.gc();
+				/// any langauge 
+				Language language =  j == 0 ? Language.Java : j == 1 ? Language.Html : j == 2 ? Language.Python : Language.Ruby;
+				long start = System.currentTimeMillis();
+				oneDifferentValue(numberOfFile, language);
+				long memory = runtime.totalMemory() - runtime.freeMemory();
+				writeResultsToCSvFile(i, System.currentTimeMillis() - start, memory, numberOfFile, language);
+			}
 		}
 	}
 
-	public void testValues (Map<String, String> behaviours, int numberOfFiles) {
-		// Today change 18/01/2022
-		File originalFile = new File(String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/HTML/BoilerController-Html-%1$d-Components.model", numberOfFiles));
+	public void testValues (List<String> behaviours, int numberOfFiles, Language language) {
+		// Today change 
+		File originalFile = new File(String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/" + language + "/BoilerController-" + language + "-%1$d-Components.model", numberOfFiles));
 		
-		// Today change 19/01/2022... For Python and Ruby models files 
-//		File originalPythonFile = new File(String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Python/BoilerController-Html-%1$d-Components.model", numberOfFiles));
-//		File originalRubyFile = new File(String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Ruby/BoilerController-Html-%1$d-Components.model", numberOfFiles));
-
-		model = new EmfModel();
-		model.setName("M");
-		model.setMetamodelFile("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/HTML/comps.ecore");
-		
-		// Today change 19/01/2022... For Python and Ruby ecore files
-//		model.setMetamodelFile("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Python/comps.ecore");
-//		model.setMetamodelFile("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Ruby/comps.ecore");
-
-		// Today change 18/01/2022.. the below style is for short path but not sure if it works or not
-//		model.setMetamodelFile(new File(System.getProperty("user.dir") + "/SyncTests/Scalability-Part2/comps.ecore").getAbsolutePath());
+		EmfModel model = new EmfModel();
+		model.setName(language.name());
+		model.setMetamodelFile("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/" + language + "/comps.ecore");
 		model.setModelFile(originalFile.getAbsolutePath());
 		model.setReadOnLoad(true);
 		try {
@@ -235,14 +201,16 @@ public class SyncGenerelisabiltyTests {
 		}
 		
 		try {
-			// Today change 19/01/2022
-			String folderPath = String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/HTML/gen-%1$d-components", numberOfFiles);
+			// Today change 
+			String folderPath = String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/" + language + "/gen-%1$d-components", numberOfFiles);			
 			
-			// Today change 19/01/2022... For Python and Ruby ecore files 
-//			String folderPath = String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Python/gen-%1$d-components", numberOfFiles);
-//			String folderPath = String.format("/Users/sultanalmutairi/git/EglSync 2/org.eclipse.epsilon.egl.sync/SyncTests/Generalisability-Part3/Ruby/gen-%1$d-components", numberOfFiles);
-
-			addAndUpdateModel(folderPath, model, behaviours);
+			// Today change
+			addAndUpdateModel(folderPath, model, behaviours, language);
+			
+//			addAndUpdateModelJava(folderPath, model, behaviours);
+//			addAndUpdateModelHtml(folderPath, model, behaviours);
+//			addAndUpdateModelPython(folderPath, model, behaviours);
+//			addAndUpdateModelRuby(folderPath, model, behaviours);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -252,249 +220,480 @@ public class SyncGenerelisabiltyTests {
 	 *  One different value
 	 */
 	
-	public boolean oneDifferentValue (int numberOfFiles)  {
-		Map<String, String> behaviours = new HashMap<>();
-		// Today change..19/01/2022.... 	
-		behaviours.put("component%1$d", "component2");
-		
-		// Today change..19/01/2022.... I commented because I used if the the file name is BoilerActuator or TemperatureController  	
-//		behaviours.put("BoilerActuator", "Half Change - return temperature - targetTemperature;");
-//		behaviours.put("TemperatureController", "1-if(temperatureDifference > 0 && boilerStatus == true) { return 1; } else if (temperatureDifference < 0 && boilerStatus == false) { return 2; } else return 0;");
-		testValues(behaviours, numberOfFiles);
+// works when we have the same value with the one in the model.	
+// works only with the first languaje, when we have one different value from the one in the model, And the rest must have the same value in the model.
+
+	public boolean oneDifferentValue (int numberOfFiles, Language language)  {
+		List<String> behaviours = new ArrayList<>(); 	
+		// It takes the first langauge and update the model as expected, but with the another languages I need to pass the same value in the model.
+		switch (language) {
+		case Java:
+			behaviours.add("hi3");		
+			break;
+		case Html:
+			behaviours.add("hi3");
+			break;
+		case Ruby:
+			behaviours.add("hi3");
+			break;
+		case Python:
+			behaviours.add("hi23");
+			break;
+
+//		default:
+//			break;
+		}
+		testValues(behaviours, numberOfFiles, language);
 		return true;
 	}
-	
+
+	// when I have the same values from the one in the model the model
+	// when I have one different values from the one in the model
+	// when I the size of the models are different -- increase by two components until 10 (now is only two)
 	/*
-	 * Two values but one same the one in the model
+	 * Scenario 1, if we have a 200 files
 	 */
 	
-//	public boolean twoDifferentValues (int numberOfFiles) {
-//		Map<String, String> behaviours = new HashMap<>();
-//		behaviours.put("BoilerActuator", "return temperature - targetTemperature;");
-//		behaviours.put("BoilerActuator", "return temperature - targetTemperature;");
-//		behaviours.put("TemperatureController", "if (temperatureDifference > 0 && boilerStatus == true) { return 1; } else if (temperatureDifference < 0 && boilerStatus == false) { return 2; } else return 0;");
-//		testValues(behaviours, numberOfFiles);
-//		return true;
-//		
-//	}
-	
-	
-////@Test
-//public void test10Files2() throws IOException {
-//	doTestNTimes(100, filePathFor10Files, () -> twoDifferentValues(10));
-//}
-//	System.out.println("Working Directory = " + System.getProperty("user.dir"));
-
-	// createModule()
-	public IEolModule createModule() {
-		try {
-			EglFileGeneratingTemplateFactory templateFactory = new EglFileGeneratingTemplateFactory();
-//			templateFactory.setOutputRoot(System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/");
-			// other workspace
-			templateFactory.setOutputRoot("/Users/sultanalmutairi/Documents/Workspaces/runtime-EclipseApplication/org.eclipse.epsilon.examples.egl.comps/boiler-To-Generate-100-Files/boiler-To-Generate-100-Files/syncregions-100Files/");
-			
-			return new EgxModule(templateFactory);
-		} catch (Exception ex) {
-			throw new RuntimeException(ex);
-		}
+	@Test
+	public void testOneDifferentValue() throws IOException {
+		doTestNTimes(1, 200);
 	}
 
 	/*
 	 * Scenario 1, if we have a 200 files
 	 */
 	
-	@Test
-	public void test200Files() throws IOException {
-		doTestNTimes(10, filePathFor200Files, () -> oneDifferentValue(200));
+//	@Test
+	public void testSimilarValue() throws IOException {
+		doTestNTimes(2, 200);
 	}
+	
+	
+	/*
+	 * Scenario 1, similar values
+	 */
+//	@Test
+	public void testSimilarValue2Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testSimilarValue4Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testSimilarValue6Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testSimilarValue8Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testSimilarValue10Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+	
+	/*
+	 * Scenario 2, different valuse
+	 */
+	
+//	@Test
+	public void testDifferentValue2Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testDifferentValue4Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testDifferentValue6Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testDifferentValue8Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+//	@Test
+	public void testDifferentValue10Components() throws IOException {
+		doTestNTimes(2, 200);
+	}
+	
+	
+	/*
+	 * Maybe Scenario 2, different valuse with multiple lines not only one.
+	 */
+	
+}	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	@Test
+//	public void testOneDiffernetValue() throws IOException {
+//		doTestNTimes(2, 200);
+//	}
+	
+//	@Test
+//	public void testDiffernetValue() throws IOException {
+//		doTestNTimes(2, 200);
+//	}
 	
 	/*
 	 * Scenario 2, if we have a 400 files
 	 */
 	
-	@Test
-	public void test400Files() throws IOException {
-		doTestNTimes(10, filePathFor400Files, () -> oneDifferentValue(400));
-	}
-	
-	/*
-	 * Scenario 3, if we have a 600 files
-	 */
-	
-	@Test
-	public void test600Files() throws IOException {
-		doTestNTimes(10, filePathFor600Files, () -> oneDifferentValue(600));
-	}
-
-	/*
-	 * Scenario 4, if we have a 800 files
-	 */
-	
-	@Test
-	public void test800Files() throws IOException {
-		doTestNTimes(10, filePathFor800Files, () -> oneDifferentValue(800));
-	}
-
-	/*
-	 * Scenario 5, if we have a 1000 files
-	 */
-	
-	@Test
-	public void test1000Files() throws IOException {
-		doTestNTimes(10, filePathFor1000Files, () -> oneDifferentValue(1000));
-	}
-	
-//	// Today change 19/01/2022... if I need separate path for each language
-//	@Test
-//	public void test200HtmlFiles() throws IOException {
-//		doTestNTimes(10, filePathFor200HtmlFiles, () -> oneDifferentValue(200));
-//	}
-//	@Test
-//	public void test200PythonFiles() throws IOException {
-//		doTestNTimes(10, filePathFor200PythonFiles, () -> oneDifferentValue(200));
-//	}
-//	@Test
-//	public void test200RubyFiles() throws IOException {
-//		doTestNTimes(10, filePathFor200RubyFiles, () -> oneDifferentValue(200));
-//	}
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	 * 
-	 * the below tests are for 50 times ran
-	 * 
-	 */
-	
-	
-	
-	
-//	/*
-//	 * Scenario 1, if we have a 100 files
-//	 */
-//	
-//	@Test
-//	public void test100Files() throws IOException {
-//		doTestNTimes(50, filePathFor100Files, () -> oneDifferentValue(100));
-//	}
-//	
-//	/*
-//	 * Scenario 2, if we have a 200 files
-//	 */
-//	
-//	@Test
-//	public void test200Files() throws IOException {
-//		doTestNTimes(50, filePathFor200Files, () -> oneDifferentValue(200));
-//	}
-//	
-//	/*
-//	 * Scenario 3, if we have a 300 files
-//	 */
-//	
-//	@Test
-//	public void test300Files() throws IOException {
-//		doTestNTimes(50, filePathFor300Files, () -> oneDifferentValue(300));
-//	}
-//	
-//	/*
-//	 * Scenario 4, if we have a 400 files
-//	 */
-//	
 //	@Test
 //	public void test400Files() throws IOException {
-//		doTestNTimes(50, filePathFor400Files, () -> oneDifferentValue(400));
+//		doTestNTimes(10, filePathFor400Files, () -> oneDifferentValue(400));
 //	}
 //	
 //	/*
-//	 * Scenario 5, if we have a 500 files
-//	 */
-//	
-//	@Test
-//	public void test500Files() throws IOException {
-//		doTestNTimes(50, filePathFor500Files, () -> oneDifferentValue(500));
-//	}
-//	
-//	/*
-//	 * Scenario 6, if we have a 600 files
+//	 * Scenario 3, if we have a 600 files
 //	 */
 //	
 //	@Test
 //	public void test600Files() throws IOException {
-//		doTestNTimes(50, filePathFor600Files, () -> oneDifferentValue(600));
+//		doTestNTimes(10, filePathFor600Files, () -> oneDifferentValue(600));
 //	}
-//	
+//
 //	/*
-//	 * Scenario 7, if we have a 700 files
-//	 */
-//	
-//	@Test
-//	public void test700Files() throws IOException {
-//		doTestNTimes(50, filePathFor700Files, () -> oneDifferentValue(700));
-//	}
-//	
-//	/*
-//	 * Scenario 8, if we have a 800 files
+//	 * Scenario 4, if we have a 800 files
 //	 */
 //	
 //	@Test
 //	public void test800Files() throws IOException {
-//		doTestNTimes(50, filePathFor800Files, () -> oneDifferentValue(800));
+//		doTestNTimes(10, filePathFor800Files, () -> oneDifferentValue(800));
 //	}
 //
 //	/*
-//	 * Scenario 9, if we have a 900 files
-//	 */
-//	
-//	@Test
-//	public void test900Files() throws IOException {
-//		doTestNTimes(50, filePathFor900Files, () -> oneDifferentValue(900));
-//	}
-//
-//	/*
-//	 * Scenario 10, if we have a 1000 files
+//	 * Scenario 5, if we have a 1000 files
 //	 */
 //	
 //	@Test
 //	public void test1000Files() throws IOException {
-//		doTestNTimes(50, filePathFor1000Files, () -> oneDifferentValue(1000));
+//		doTestNTimes(10, filePathFor1000Files, () -> oneDifferentValue(1000));
 //	}
+	
+//	public static void addAndUpdateModelJava(String folderPath, EmfModel model, List<String> behaviours) throws IOException {
+//		Map<String, String> idToBehaviour = new HashMap<>();
+//		File[] files = new File(folderPath).listFiles();
+//		// check if file is exists
+//		for (File f : files) {
+//			if (!f.isFile())
+//				continue;
+//			for (String behaviour : behaviours) {
+//				BufferedReader original = new BufferedReader(new FileReader(f));
+//
+//				List<String> newLines = new ArrayList<String>();
+//				String line;
+//				while ((line = original.readLine()) != null) {
+//					newLines.add(line);
+//					
+//					// Today change.. for html, but I want to make it general for other language comment like Python 
+//					String id = regexMatch(line, "sync (.+?), behaviour");
+//					if (id != null) {
+//						idToBehaviour.put(id, behaviour);
+//						newLines.add(behaviour);
+//						while (!line.contains("endSync"))
+//							line = original.readLine();
+//						newLines.add(line);
+//					}
+//				}
+//				original.close();
+//				Files.write(f.toPath(), newLines);
+//				break;
+//			}
+//		}
 //		
+//		// Update the model with values taken from the generated file..
+//		FolderSync folderSync = new FolderSync();
+//		folderSync.getSynchronization(folderPath, model);
+//
+//		model.store();
+//		IPropertyGetter propertyGetter = model.getPropertyGetter();
+//		for (String id : idToBehaviour.keySet()) {
+//			Object modelElement = model.getElementById(id);
+//			try {
+//				assertEquals("test 1 java", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "behaviour"));
+//			} catch (EolRuntimeException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+//	public static void addAndUpdateModelHtml(String folderPath, EmfModel model, List<String> behaviours) throws IOException {
+//		Map<String, String> idToBehaviour = new HashMap<>();
+//		File[] files = new File(folderPath).listFiles();
+//		// check if file is exists
+//		for (File f : files) {
+//			if (!f.isFile())
+//				continue;
+//			for (String behaviour : behaviours) {
+//				BufferedReader original = new BufferedReader(new FileReader(f));
+//
+//				List<String> newLines = new ArrayList<String>();
+//				String line;
+//				while ((line = original.readLine()) != null) {
+//					newLines.add(line);
+//					
+//					// Today change.. for html, but I want to make it general for other language comment like Python 
+//					String id = regexMatch(line, "sync (.+?), HtmlBehaviour");
+//					if (id != null) {
+//						idToBehaviour.put(id, behaviour);
+//						newLines.add(behaviour);
+//						while (!line.contains("endSync"))
+//							line = original.readLine();
+//						newLines.add(line);
+//					}
+//				}
+//				original.close();
+//				Files.write(f.toPath(), newLines);
+//				break;
+//			}
+//		}
+//		
+//		// Update the model with values taken from the generated file..
+//		FolderSync folderSync = new FolderSync();
+//		folderSync.getSynchronization(folderPath, model);
+//
+//		model.store();
+//		IPropertyGetter propertyGetter = model.getPropertyGetter();
+//		for (String id : idToBehaviour.keySet()) {
+//			Object modelElement = model.getElementById(id);
+//			try {
+//				assertEquals("test 2 html", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "HtmlBehaviour"));
+//			} catch (EolRuntimeException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+//	
+//	public static void addAndUpdateModelPython(String folderPath, EmfModel model, List<String> behaviours) throws IOException {
+//		Map<String, String> idToBehaviour = new HashMap<>();
+//		File[] files = new File(folderPath).listFiles();
+//		// check if file is exists
+//		for (File f : files) {
+//			if (!f.isFile())
+//				continue;
+//			for (String behaviour : behaviours) {
+//				BufferedReader original = new BufferedReader(new FileReader(f));
+//
+//				List<String> newLines = new ArrayList<String>();
+//				String line;
+//				while ((line = original.readLine()) != null) {
+//					newLines.add(line);
+//					
+//					// Today change.. for html, but I want to make it general for other language comment like Python 
+//					String id = regexMatch(line, "sync (.+?), PythonBehaviour");
+//					if (id != null) {
+//						idToBehaviour.put(id, behaviour);
+//						newLines.add(behaviour);
+//						while (!line.contains("endSync"))
+//							line = original.readLine();
+//						newLines.add(line);
+//					}
+//				}
+//				original.close();
+//				Files.write(f.toPath(), newLines);
+//				break;
+//			}
+//		}
+//		
+//		// Update the model with values taken from the generated file..
+//		FolderSync folderSync = new FolderSync();
+//		folderSync.getSynchronization(folderPath, model);
+//
+//		model.store();
+//		IPropertyGetter propertyGetter = model.getPropertyGetter();
+//		for (String id : idToBehaviour.keySet()) {
+//			Object modelElement = model.getElementById(id);
+//			try {
+//				assertEquals("test 3 python", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "PythonBehaviour"));
+//			} catch (EolRuntimeException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+//	public static void addAndUpdateModelRuby(String folderPath, EmfModel model, List<String> behaviours) throws IOException {
+//		Map<String, String> idToBehaviour = new HashMap<>();
+//		File[] files = new File(folderPath).listFiles();
+//		// check if file is exists
+//		for (File f : files) {
+//			if (!f.isFile())
+//				continue;
+//			for (String behaviour : behaviours) {
+//				BufferedReader original = new BufferedReader(new FileReader(f));
+//
+//				List<String> newLines = new ArrayList<String>();
+//				String line;
+//				while ((line = original.readLine()) != null) {
+//					newLines.add(line);
+//					
+//					// Today change.. for html, but I want to make it general for other language comment like Python 
+//					String id = regexMatch(line, "sync (.+?), RubyBehaviour");
+//					if (id != null) {
+//						idToBehaviour.put(id, behaviour);
+//						newLines.add(behaviour);
+//						while (!line.contains("endSync"))
+//							line = original.readLine();
+//						newLines.add(line);
+//					}
+//				}
+//				original.close();
+//				Files.write(f.toPath(), newLines);
+//				break;
+//			}
+//		}
+//		
+//		// Update the model with values taken from the generated file..
+//		FolderSync folderSync = new FolderSync();
+//		folderSync.getSynchronization(folderPath, model);
+//
+//		model.store();
+//		IPropertyGetter propertyGetter = model.getPropertyGetter();
+//		for (String id : idToBehaviour.keySet()) {
+//			Object modelElement = model.getElementById(id);
+//			try {
+//				assertEquals("test 4 ruby", idToBehaviour.get(id), (String) propertyGetter.invoke(modelElement, "RubyBehaviour"));
+//			} catch (EolRuntimeException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+//	
 //}
 
 
@@ -506,163 +705,86 @@ public class SyncGenerelisabiltyTests {
 
 
 
-// with one different value
-//String filePathFor100Files = "DataFor100FilesWith1DifferentValue.csv";
-//String filePathFor200Files = "DataFor200FilesWith1DifferentValue.csv";
-//String filePathFor300Files = "DataFor300FilesWith1DifferentValue.csv";
-//String filePathFor400Files = "DataFor400FilesWith1DifferentValue.csv";
-//String filePathFor500Files = "DataFor500FilesWith1DifferentValue.csv";
-//String filePathFor600Files = "DataFor600FilesWith1DifferentValue.csv";
-//String filePathFor700Files = "DataFor700FilesWith1DifferentValue.csv";
-//String filePathFor800Files = "DataFor800FilesWith1DifferentValue.csv";
-//String filePathFor900Files = "DataFor900FilesWith1DifferentValue.csv";
-//String filePathFor1000Files = "DataFor1000FilesWith1DifferentValue.csv";
-
-//String filePathFor200Files = "DataFor200FilesWithTheSameValue.csv";
-//String filePathFor400Files = "DataFor400FilesWithTheSameValue.csv";
-//String filePathFor6000Files = "DataFor600FilesWithTheSameValue.csv";
-//String filePathFor8000Files = "DataFor800FilesWithTheSameValue.csv";
-//String filePathFor10000Files = "DataFor1000FilesWithTheSameValue.csv";
-
-//String filePathFor200Files = "DataFor200FilesWith1DifferentValue.csv";
-//String filePathFor400Files = "DataFor400FilesWith1DifferentValue.csv";
-//String filePathFor600Files = "DataFor600FilesWith1DifferentValue.csv";
-//String filePathFor800Files = "DataFor800FilesWith1DifferentValue.csv";
-//String filePathFor1000Files = "DataFor1000FilesWith1DifferentValue.csv";
 
 
 
 
-//@Test
-//public void runTheGenerator() {
-//	
-//	File originalFile = new File(System.getProperty("user.dir") + String.format("/boiler-To-Generate-%1$d-Files/BoilerController-%1$d-Components.model", 100));
-//	model = new EmfModel();
-//	model.setName("M");
-//	model.setMetamodelFile(new File(System.getProperty("user.dir") + "/boiler-Ecore/comps.ecore").getAbsolutePath());
-//	model.setModelFile(originalFile.getAbsolutePath());
-//	model.setReadOnLoad(true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// Tody changed.. for Java, html, Python and Ruby comments..
+//String id = regexMatch(line, "//sync (.+?), name");
+//if (id != null) {
+//	idToBehaviour.put(id, behaviour);
+//	newLines.add(behaviour);
+//	// Today change.... to below one
+//	// while (!line.contains("//endSync"))
+//	while (!line.contains("//endSync"))
+//		line = original.readLine();
+//	newLines.add(line);
+//}
+//String id = regexMatch(line, "<!--sync (.+?), name  -->");
+//if (id != null) {
+//	idToBehaviour.put(id, behaviour);
+//	newLines.add(behaviour);
+//	while (!line.contains("<!--endSync -->"))
+//		line = original.readLine();
+//	newLines.add(line);
+//}
+//String id = regexMatch(line, "#sync (.+?), pythonBehaviour");
+//if (id != null) {
+//	idToBehaviour.put(id, behaviour);
+//	newLines.add(behaviour);
+//	while (!line.contains("#endSync"))
+//		line = original.readLine();
+//	newLines.add(line);
+//}
+//
+//// Tody changed.. for Ruby
+//String id = regexMatch(line, "#sync (.+?), RubyBehaviour");
+//if (id != null) {
+//	idToBehaviour.put(id, behaviour);
+//	newLines.add(behaviour);
+//	while (!line.contains("#endSync"))
+//		line = original.readLine();
+//	newLines.add(line);
+//}
+
+
+
+
+
+
+
+
+
+//  VERY IMPORTANT METHOD..
+//// createModule() This method was before the @Teat method, I will return to this later and make sure it run the transformation automatically 
+//public IEolModule createModule() {
 //	try {
-//		model.load();
-//	} catch (EolModelLoadingException e2) {
-//		e2.printStackTrace();
-//	}
-//	
-//	
-//	
-//	
-//	IEolModule module = createModule(); // The createModule() method follows
-//	module.getContext().getModelRepository().addModel(model); // The model parameter is the EmfModel you already
-//	try {
-//		module.parse(new File ("user.dir") + String.format("/boiler-To-Generate-100-Files/sync-regions100.egx"));
+//		EglFileGeneratingTemplateFactory templateFactory = new EglFileGeneratingTemplateFactory();
+////		templateFactory.setOutputRoot(System.getProperty("user.dir") + "/SyncTests/GeneratedFilesFromUniversity/");
 //		// other workspace
-//		module.parse(new File ("/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/boiler-To-Generate-100-Files/sync-regions100.egx"));
-//	} catch (Exception e) {
-//		e.printStackTrace();
-//	}
-//	try {
-//		module.execute();
-//	} catch (EolRuntimeException e) {
-//		e.printStackTrace();
+//		templateFactory.setOutputRoot("/Users/sultanalmutairi/Documents/Workspaces/runtime-EclipseApplication/org.eclipse.epsilon.examples.egl.comps/boiler-To-Generate-100-Files/boiler-To-Generate-100-Files/syncregions-100Files/");
+//		
+//		return new EgxModule(templateFactory);
+//	} catch (Exception ex) {
+//		throw new RuntimeException(ex);
 //	}
 //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// I removed this part for the temp model because I do not need it for these test as each test not depends on others..
-//
-//@Rule
-//public TemporaryFolder tempFolder = new TemporaryFolder();
-//
-//@Before
-//public void init() throws IOException {
-//
-//	File orginalFile = new File(System.getProperty("user.dir") + "/boiler-To-Generate-10-Files/BoilerController-10-Components.model");
-////	File orginalFile = new File(System.getProperty("/Users/sultanalmutairi/git/Epsilon-Source/org.eclipse.epsilon/examples/org.eclipse.epsilon.examples.egl.comps/boiler-To-Generate-10-Files/BoilerController-10-Components.model"));
-//	File tempFile = tempFolder.newFile("tempUni.model");
-//	try {
-//		Files.copy(orginalFile.toPath(), tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-//	} catch (IOException e) {
-//		e.printStackTrace();
-//	}
-//
-//	tempModel = new EmfModel();
-//	tempModel.setName("M");
-//	tempModel.setMetamodelFile(new File(System.getProperty("user.dir") + "/boiler-Ecore/comps.ecore").getAbsolutePath());
-////	tempModel.setMetamodelFile(new File(System.getProperty("/Users/sultanalmutairi/git/EglSync/org.eclipse.epsilon.egl.sync/boiler-To-Generate-10-Files/comps.ecore")).getAbsolutePath());
-//	tempModel.setModelFile(tempFile.getAbsolutePath());
-//	tempModel.setReadOnLoad(true);
-//
-//	try {
-//		tempModel.load();
-//	} catch (EolModelLoadingException e2) {
-//		e2.printStackTrace();
-//	}
-//	tempFile.deleteOnExit();
-//
-//}
-
-
-
-
-

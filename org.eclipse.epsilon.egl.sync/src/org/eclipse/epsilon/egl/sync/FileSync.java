@@ -34,21 +34,21 @@ public class FileSync {
 
 	}
 
-	
-	public void reusefile() {
-		try {
-			fIn.getChannel().position(0);
-			bRead = new BufferedReader(new InputStreamReader(fIn));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
+	// comment this and close the file...
+//	public void reusefile() {
+//		try {
+//			fIn.getChannel().position(0);
+//			bRead = new BufferedReader(new InputStreamReader(fIn));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//
+//	}
 
 	// Find all the sync regions
 	public ArrayList<Synchronization> getAllTheSyncRegionsOfTheFile() {
 		ArrayList<Synchronization> allTheSyncRegionsInTheFile = new ArrayList<Synchronization>();
-		this.reusefile();
+//		this.reusefile();
 		
 		String line = "";
 		try {
@@ -222,6 +222,12 @@ public class FileSync {
 					return null;
 				}
 			}
+		}
+		try {
+			fIn.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return allTheSyncRegionsInTheFile;
 	}

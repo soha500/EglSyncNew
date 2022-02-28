@@ -1,10 +1,10 @@
 # ECMFA 2022
 ## Generalisability Experiment
-- Runner class (as JUnit test) can be found here [Add link to GitHub path here]
+- Runner class (as JUnit test) can be found [here](https://github.com/soha500/EglSyncNew/blob/master/org.eclipse.epsilon.egl.sync/src/org/eclipse/epsilon/egl/sync/SyncGenerelisabiltyTests.java).
 - The models and generated text files can be downloaded from here: [Add Google Drive link Here]
 
 ## Correctness Experiment
-- Runner class (as JUnit test) can be found here [Add link to GitHub path here]
+- Runner class (as JUnit test) can be found [here](https://github.com/soha500/EglSyncNew/blob/master/org.eclipse.epsilon.egl.sync/src/org/eclipse/epsilon/egl/sync/SyncCorrectnessTests.java).
 - The models and generated text files can be downloaded from here: [Add Google Drive link Here]
 
 ## Performance Experiment 

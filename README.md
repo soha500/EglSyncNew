@@ -4,12 +4,12 @@
 
 ## How to get it works?
 In order to use presented appraoch, user needs to follow the below steps:
-1- Download Eclipce to your machine, can be found [here]
+1. Download Eclipce to your machine, can be found [here]
 (https://www.eclipse.org/downloads/).
-2- Download Epsilon to your machine, can be found [here]
+2. Download Epsilon to your machine, can be found [here]
 (https://www.eclipse.org/epsilon/download/).
-3- Import Sync Engine package to your machine, can be found [here]
-(https://www.eclipse.org/epsilon/download/)
+3. Import Sync Engine package to your machine, can be found [here]
+(https://github.com/soha500/EglSyncNew/tree/master/org.eclipse.epsilon.egl.sync/src/org/eclipse/epsilon/egl/sync).
 to the existing packages.
 
 ## Changing absolute path to make it works with your machine 

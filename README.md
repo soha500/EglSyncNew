@@ -8,7 +8,7 @@ In order to use presented approach, users need to follow the following steps in 
 1. Download Eclipce, can be downloaded from [here](https://www.eclipse.org/downloads/).
 2. Download Epsilon, can be downloaded from [here](https://www.eclipse.org/epsilon/download/).
 3. Import Epsilon source code, can be downloaded from [here](https://www.eclipse.org/epsilon/download/#source-code).
-4. Delet the Egl engine package from the source code, can be found under this name org.eclipse.epsilon.egl.engine.
+4. Delet the Egl engine package from the source code, can be found under this name "org.eclipse.epsilon.egl.engine".
 5. Import the new Egl engine version (called org.eclipse.epsilon.egl.engine), can be found [here](https://drive.google.com/file/d/11cjBCZk2A98cPZXfEjo__vwyF27XPKv3/view?usp=sharing).
 6. Import the Sync engine package (called org.eclipse.epsilon.egl.sync), can be found [here](https://drive.google.com/file/d/1oWZl3BhnY1tCRnY-X2bX1HElzPvP5_YW/view?usp=sharing).
 

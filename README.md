@@ -13,10 +13,10 @@ In order to use presented approach, users need to follow the following steps in 
 
 
 ## How to run the tests?
-1. Open Sync engine package under the name "org.eclipse.epsilon.egl.sync"
-a. To run Correctness tests: go to SyncCorrectnessTests.java >> press Right click >> Run as  >> 2 JUnit Test. 
-b. To run Generlisabilty tests: go to SyncGenerelisabiltyTests >> press Right click >> Run as  >> 2 JUnit Test.
-c. To run Scalabilty and Performance tests: go to SyncScalabiltyTests.java >> press Right click >> Run as  >> 2 JUnit Test. 
+Open Sync engine package under the name "org.eclipse.epsilon.egl.sync"
+. To run Correctness tests: go to SyncCorrectnessTests.java class >> press Right click >> Run as  >> 2 JUnit Test. 
+. To run Generlisabilty tests: go to SyncGenerelisabiltyTests class >> press Right click >> Run as  >> 2 JUnit Test.
+. To run Scalabilty and Performance tests: go to SyncScalabiltyTests.java class >> press Right click >> Run as  >> 2 JUnit Test. 
 
 
 
